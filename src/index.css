@@ -1,5 +1,104 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Avenir !important;
+  font-weight: 200;
+  -webkit-font-smoothing: antialiased
+}
+h1,h2,h3,span {
+  font-family: Avenir !important;
+  font-weight: 200 ;
+  -webkit-font-smoothing: antialiased
+}
+
+p {
+  font-weight: 350;
+}
+
+button {
+  font-weight: normal;
+}
+
+.menuTextBlanc a {
+  font-weight: bold !important;
+  font-size: 1.03em ;
+  padding: 5px !important;
+  margin-top: 0.6em;
+  margin-left: 0.2em;
+  margin-right:0.1em;
+  }
+
+.menuText .item {
+  font-weight: bold !important;
+  font-size: 1.03em ;
+  margin-top: 0.9em;
+  margin-right: 0.5em;
+  padding: 0.4em 0.4em 0.4em 0.4em !important;
+  color : #4F4F4F !important;
+}
+
+.menuText .item:hover{
+  background-color: rgba(94, 196, 169,0.3) !important;
+  border-radius: 5px !important;
+}
+
+.menuText .active.item {
+  background-color: rgba(94, 196, 169,0.3) !important;
+  border-radius: 5px !important;
+}
+
+  .greenText {
+    color: #5EC4A9;
+  }
+
+  .greenText2 {
+    color: #5EC4A9;
+    font-weight: bold;
+  }
+
+  .blueText {
+    color: #00B1DF;
+    font-weight: bold;
+  }
+
+  .boldText {
+    font-weight: bold;
+  }
+
+.MainButton:hover{
+  color: #58caf1 !important;
+}
+
+.propText p {
+  font-size : 1.2em;
+  text-align : center;
+  color : #605E5E;
+  padding : 1em 1em;
+  font-weight: 300 !important;
+}
+
+.boutonMLC {
+  color: white !important;
+  background-color: #58caf1 !important;
+  border: 2px solid #27BFF3 !important;
+}
+
+.boutonMLC:hover{
+  background-color : #50bade !important;
+}
+
+.boutonMLC2 {
+  color: #58caf1 !important;
+  background-color: white !important;
+  border: 2px solid #58caf1 !important;
+}
+
+.boutonMLC2:hover{
+  color : #5EC4A9 !important;
+  border: 2px solid #5EC4A9 !important;
+}
+
+.BlocFinPar {
+  font-size : 1.2em;
+  color : #868585;
 }
