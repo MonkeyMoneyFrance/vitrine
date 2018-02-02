@@ -30,19 +30,14 @@ class Chatbot extends React.Component {
                     steps={[
                         {
                             id: '1',
-                            message: 'Bonjour, je suis à votre écoute',
+                            message: "Bonjour!  \n Comment pouvont-nous vous aidez ?",
                             trigger: '2',
                         },
                         {
                             id: '2',
                             user: true,
-                            trigger: '3',
-                        },
-                        {
-                            id: '3',
-                            message: 'enchanté de vous connaitre {previousValue} que puis je faire pour vous',
                             end: true,
-                        }
+                        },
                     ]}
                 />
             </ThemeProvider>
