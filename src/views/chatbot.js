@@ -1,7 +1,7 @@
 import React from 'react';
 import ChatBot from 'react-simple-chatbot';
 import {ThemeProvider} from 'styled-components';
-import Features2 from "./features2";
+import Features2 from "./features";
 import Logo from '../images/logo.png';
 
 class Chatbot extends React.Component {
