@@ -1,18 +1,17 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Avenir !important;
-  font-weight: 200;
-  -webkit-font-smoothing: antialiased
-}
-h1,h2,h3,span {
-  font-family: Avenir !important;
-  font-weight: 200 ;
-  -webkit-font-smoothing: antialiased
+  font-weight: 100;
+  font-family: 'Avenir','Lato' !important;
+  -webkit-font-smoothing: antialiased  !important;
+  -moz-osx-font-smoothing: grayscale !important;
 }
 
-p {
-  font-weight: 350;
+h1,h2,h3,span {
+  font-family: 'Avenir', 'Lato' !important;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased  !important;
+  -moz-osx-font-smoothing: grayscale !important;
 }
 
 button {
@@ -70,10 +69,9 @@ button {
 }
 
 .propText p {
-  font-size : 1.2em;
+  font-size : 1em;
   text-align : center;
   color : #605E5E;
-  padding : 1em 1em;
   font-weight: 300 !important;
 }
 
@@ -91,6 +89,7 @@ button {
   color: #58caf1 !important;
   background-color: white !important;
   border: 2px solid #58caf1 !important;
+  margin-top: 1em;
 }
 
 .boutonMLC2:hover{
@@ -101,4 +100,58 @@ button {
 .BlocFinPar {
   font-size : 1.2em;
   color : #868585;
+}
+
+.prix {
+  font-size: 1.3em;
+  font-weight : bold !important;
+  color : #605E5E;
+}
+
+.teamTitle {
+  font-size: 1em;
+  font-style: italic !important;
+  color : #605E5E
+}
+
+.divDisplay{
+  height: 120px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.linkFooter{
+  color: #77787a !important;
+}
+
+.linkFooter:hover{
+  color: white !important;
+}
+
+.linkIcon{
+  color: grey !important;
+}
+
+.linkIcon{
+  color: white !important;
+}
+.root-enter {
+  opacity: 0.01;
+}
+
+.root-enter.root-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.root-leave {
+  opacity: 1;
+}
+
+.root-leave.root-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }

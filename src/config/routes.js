@@ -3,7 +3,7 @@ import Features from '../views/features';
 import Prices from '../views/prices';
 import LocalCurrency from '../views/localcurrency';
 import Company from '../views/company';
-
+import ContactForm from '../views/contactform';
 const routes = [
     { path: '/',
       exact : true,
@@ -20,6 +20,9 @@ const routes = [
   },{ path: '/monkeymoney',
       exact : true,
       main: Company,
+  },{ path: '/contactez_nous',
+      exact : true,
+      main: ContactForm,
   }
 ];
 

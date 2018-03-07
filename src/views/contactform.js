@@ -13,10 +13,13 @@ import {
     Visibility,
     Transition,
     Form,
-    Message
+    Message,
+    Sidebar
 
 } from 'semantic-ui-react'
 import firebase from '../config/initfirebase'
+import TopMenu from '../components/topmenu'
+import SidebarMenu from '../components/sidebar';
 import swal from 'sweetalert'
 import '../contact.css'
 
@@ -29,30 +32,13 @@ class ContactForm extends Component {
         this.handleChange = this.handleChange.bind(this)
         this.handleDropdown = this.handleDropdown.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
-    }
-
-    componentWillMount() {
-
-        var self = this
-        firebase.database().ref('home').on('value', function (snapshot) {
-
-            self.setState({
-                title: snapshot.val()['title'],
-                title2: snapshot.val()['title2'],
-                underTitle: snapshot.val()['underTitle'],
-                underContent: snapshot.val()['underContent'],
-                buttonTitle: snapshot.val()['buttonTitle'],
-                imageTitle: snapshot.val()['imageTitle'],
-                features: snapshot.val()['features'],
-                items: snapshot.val()['items'],
-                endpage: snapshot.val()['endpage']
-            })
-        })
-
 
     }
+
+
 
     handleSubmit(){
+      var self = this
       if (this.state.error != '' && this.state.error != null) return
 
       this.setState({loading:true})
@@ -68,12 +54,33 @@ class ContactForm extends Component {
       ) {
         this.setState({error:'Vous devez remplir tous les champs',loading:false})
       } else {
-        for (var i in message) {
-          message[i] = ""
-          document.getElementById(i).value = ''
+
+        var xhttp = new XMLHttpRequest();
+
+
+        xhttp.open("POST", 'https://us-central1-site-vitrine-c87e8.cloudfunctions.net/'+ "MessagePeople" , true);
+        xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhttp.send("message="+(JSON.stringify(message)));
+        xhttp.onreadystatechange = function() {
+          if (this.readyState===4) {
+            var data = JSON.parse(this.responseText)
+
+            if (data.response == true) {
+              swal('Message Envoyé!')
+              for (var i in message) {
+                message[i] = ""
+                document.getElementById(i).value = ''
+              }
+
+              self.setState({message})
+              self.setState({loading:false})
+            } else {
+              swal("Erreur à l'envoi : " + data.response)
+            }
+
+          }
         }
-        this.setState({message})
-        this.setState({loading:false})
+
         // send to Post
       }
 
@@ -149,9 +156,16 @@ class ContactForm extends Component {
 
     }
     render(){
-      if (!this.state.items) return null
-      // onBlur={(e,data)=>this.setState({contactName:data.value})}
+      var home = this.props.website.home
+
       return (
+        <div>
+          <SidebarMenu ref='sidebarmenu'  closeSideBar={()=>this.refs.topmenu.shouldDisplay = false}/>
+          <TopMenu     ref='topmenu' path={this.props.path} openSideBar={(bool)=>this.refs.sidebarmenu.setState({visible:bool})}/>
+          <Sidebar.Pushable  >
+
+        <Sidebar.Pusher>
+
         <Segment
             inverted
             textAlign='center'
@@ -170,7 +184,7 @@ class ContactForm extends Component {
                                 letterSpacing: '-0.03em', lineHeight: '1.8em'
                             }}
                         >
-                            <div dangerouslySetInnerHTML={{__html: this.state.items[4].title}}></div>
+                            <div dangerouslySetInnerHTML={{__html: home.items[4].title}}></div>
                         </Header>
 
                         <Form autocomplete="off" disabled={this.state.loading} onSubmit={this.handleSubmit}  error={this.state.error && this.state.error != ''} inverted style={{width:'60%',margin:'auto',textAlign:'left'}}>
@@ -278,7 +292,7 @@ class ContactForm extends Component {
                                 lineHeight: '1.3em',
                             }}
                         >
-                            <div dangerouslySetInnerHTML={{__html: this.state.items[4].title2}}></div>
+                            <div dangerouslySetInnerHTML={{__html: home.items[4].title2}}></div>
                         </Header>
 
 
@@ -291,11 +305,11 @@ class ContactForm extends Component {
                                 letterSpacing: '-0.03em', lineHeight: '1.8em'
                             }}
                         >
-                            <div dangerouslySetInnerHTML={{__html: this.state.items[4].title}}></div>
+                            <div dangerouslySetInnerHTML={{__html: home.items[4].title}}></div>
                         </Header>
 
                         <Button className='MainButton' as='a' size='small' style={{marginTop: '1em'}}>
-                            {this.state.items[4].buttontitle}
+                            {home.items[4].buttontitle}
                             <Icon name='right arrow'/>
                         </Button>
 
@@ -310,14 +324,18 @@ class ContactForm extends Component {
                                 lineHeight: '1.3em',
                             }}
                         >
-                            <div dangerouslySetInnerHTML={{__html: this.state.items[4].title2}}></div>
+                            <div dangerouslySetInnerHTML={{__html: home.items[4].title2}}></div>
                         </Header>
 
 
                     </Grid.Column>
                 </Grid>
             </Container>
-        </Segment>)
+        </Segment>
+      </Sidebar.Pusher>
+    </Sidebar.Pushable>
+  </div>
+    )
     }
   }
   export default ContactForm;

@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 20s ease-in;
   height: 80px;
 }
 
@@ -20,6 +20,36 @@
 
 .App-intro {
   font-size: large;
+}
+
+.SlideIn-appear {
+  transform: translateX(100%);
+  opacity: 0.3;
+}
+.SlideIn-appear.SlideIn-appear-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in;
+}
+.SlideIn-enter {
+    opacity: 0.3;
+    transform: translateX(100%);
+}
+.SlideIn-enter.SlideIn-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.5s ease-in ;
+}
+.SlideIn-leave {
+    opacity: 1.0;
+    transform: translateX(0);
+}
+.SlideIn-leave.SlideIn-leave-active {
+    opacity: 0.3;
+    position: absolute;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in;
 }
 
 @keyframes App-logo-spin {

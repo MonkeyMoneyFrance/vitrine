@@ -18,6 +18,8 @@ import {
   Dropdown,
   Visibility,
   Transition,
+  Sidebar,
+  Responsive
 } from 'semantic-ui-react'
 import logo from '../images/logoblanc.png'
 
@@ -43,7 +45,7 @@ export default  class MenuContainer extends Component {
             <Link to='fonctionnalites'><Menu.Item as='a' >Fonctionnalites</Menu.Item></Link>
             <Link to='offres'><Menu.Item as='a' >Offres</Menu.Item></Link>
             <Link to='monnaielocale'><Menu.Item as='a' >Monnaie Locale</Menu.Item></Link>
-            <Link to='monkeymoney'><Menu.Item as='a' >Monkey Money</Menu.Item></Link>
+            <Link to='monkeymoney'><Menu.Item as='a'>Monkey Money</Menu.Item></Link>
           </Menu.Menu>
           </Menu>
           </Grid.Column>
@@ -59,6 +61,11 @@ export default  class MenuContainer extends Component {
             </Link>
           </Menu.Menu>
           <Menu.Menu borderless position='right' >
+            <Menu.Item  icon='sidebar' size='medium' style={{width:'40px'}}/>
+
+          
+
+
           <Dropdown item icon='sidebar' size='medium' style={{width:'40px'}}>
               <Dropdown.Menu fluid style={{backgroundColor:'rgba(0,0,0,.87)'}}>
                 <Dropdown.Item as='a' style={{color:'rgba(0,0,0,.87)'}}><Link to='/'>L'essentiel</Link></Dropdown.Item>
