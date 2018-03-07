@@ -1,0 +1,32 @@
+
+
+input,select,.dropdown,textarea  {
+  font-size : 16px !important;
+  height : 42px;
+  color : white !important;
+  border : 0px !important;
+  padding-left: 0 !important;
+  border:none !important;
+  box-shadow: none !important;
+}
+
+textarea {
+  height: auto !important;
+  min-height: 200px;
+}
+.ui.form .field.error label {
+  /*  change style of error label */
+  color : blue !important;
+  font-size: 16px;
+}
+.field {
+  margin : 1.5em 0 0 0 !important;
+}
+.field label{
+  transition: all 0.2s ease-in;
+  margin : 0 0 0.1em 0 !important;
+}
+
+.divider {
+  margin : 0.2em 0 !important;
+}
