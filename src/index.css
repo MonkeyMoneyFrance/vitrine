@@ -138,20 +138,3 @@ button {
 .linkIcon{
   color: white !important;
 }
-.root-enter {
-  opacity: 0.01;
-}
-
-.root-enter.root-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-
-.root-leave {
-  opacity: 1;
-}
-
-.root-leave.root-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
-}

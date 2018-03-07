@@ -59,7 +59,7 @@ class App extends Component {
                     exact={route.exact}
                     render={props =>
 
-                      <route.main ref='main' {...self.state}/>
+                      <route.main path={route.path} ref='main' {...self.state}/>
 
 
                   }

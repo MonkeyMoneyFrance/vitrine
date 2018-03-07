@@ -26,6 +26,7 @@ import ChatBot from './chatbot';
 import banqueImage from '../images/home/index'
 import Fond from '../images/home/fond.png'
 import firebase from '../config/initfirebase'
+import {Link} from 'react-router-dom'
 
 
 class Prices extends Component {
@@ -539,105 +540,159 @@ class Prices extends Component {
                 </Segment>
 
 {/* Partie questions fréquentes */}
-          <Segment centered verticalAlign='middle' vertical style=
-            {{paddingTop:'1em',
-            paddingLeft: '1em',
-            paddingBottom:'7em',
-            paddingRight:'1em',
-            backgroundColor: '#f7f9fa'
-          }}>
-
-            <Header as='h2' textAlign='center' style={{
-                margin: 'auto',
-                marginTop: '1em',
-                marginBottom: '1em',
-                fontWeight: '200',
-                fontSize: '3em',
-                color: '#4F4F4F',
-                paddingBottom: '1em'
-            }}
-            >
-                <div dangerouslySetInnerHTML={{__html: prices.faq.mainTitle}}></div>
-            </Header>
-            <Grid centered>
-              <Grid.Row  centered columns={2}>
-                <Grid.Column width={7} style={{marginRight:'1em'}}>
-                  <Header as='h3'
-                          style={{fontweight: 'bold', color: '#4F4F4F', fontSize: '1.4em'}}>
-                    <div dangerouslySetInnerHTML={{__html:prices.faq[0].title}}></div>
-                  </Header>
-                  <p>
-                    <div dangerouslySetInnerHTML={{__html:prices.faq[0].content}}></div>
-                  </p>
-                </Grid.Column>
-                <Grid.Column width={7} style={{marginLeft:'1em'}}>
-                  <Header as='h3'
-                          style={{fontweight: 'bold', color: '#4F4F4F', fontSize: '1.4em'}}>
-                    <div dangerouslySetInnerHTML={{__html:prices.faq[1].title}}></div>
-                  </Header>
-                  <p>
-                    <div dangerouslySetInnerHTML={{__html:prices.faq[1].content}}></div>
-                  </p>
-                </Grid.Column>
-              </Grid.Row>
-              <Grid.Row centered columns={2} style={{paddingTop:'2em'}}>
-                <Grid.Column width={7} style={{marginRight:'1em'}}>
-                  <Header as='h3'
-                          style={{fontweight: 'bold', color: '#4F4F4F', fontSize: '1.4em'}}>
-                    <div dangerouslySetInnerHTML={{__html:prices.faq[2].title}}></div>
-                  </Header>
-                  <p>
-                    <div dangerouslySetInnerHTML={{__html:prices.faq[2].content}}></div>
-                  </p>
-                </Grid.Column>
-                <Grid.Column width={7} style={{marginLeft:'1em'}}>
-                  <Header as='h3'
-                          style={{fontweight: 'bold', color: '#4F4F4F', fontSize: '1.4em'}}>
-                    <div dangerouslySetInnerHTML={{__html:prices.faq[3].title}}></div>
-                  </Header>
-                  <p>
-                    <div dangerouslySetInnerHTML={{__html:prices.faq[3].content}}></div>
-                  </p>
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
-          </Segment>
+<Segment centered verticalAlign='middle' vertical style=
+  {{paddingTop:'1em',
+  paddingLeft: '1em',
+  paddingBottom:'7em',
+  paddingRight:'1em',
+  backgroundColor: '#f7f9fa'
+}}>
+<Grid textAlign='center'>
+  <Grid.Column only='computer' width={16}>
+    <Header as='h2' textAlign='center' style={{
+          margin: 'auto',
+          marginTop: '1em',
+          marginBottom: '1em',
+          fontWeight: '200',
+          fontSize: '3em',
+          color: '#4F4F4F',
+          paddingBottom: '1em'
+      }}
+      >
+          <div dangerouslySetInnerHTML={{__html: prices.faq.mainTitle}}></div>
+    </Header>
+  </Grid.Column>
+  <Grid.Column only='mobile tablet' width={16} >
+    <Header as='h2' textAlign='center' style={{
+          margin: 'auto',
+          marginTop: '1em',
+          marginBottom: '1em',
+          fontWeight: '200',
+          fontSize: '2em',
+          color: '#4F4F4F',
+          paddingBottom: '1em'
+      }}
+      >
+          <div dangerouslySetInnerHTML={{__html: prices.faq.mainTitle}}></div>
+    </Header>
+  </Grid.Column>
+</Grid>
+  <Grid stackable centered>
+    <Grid.Row  centered columns={2}>
+      <Grid.Column width={7} style={{marginRight:'1em'}}>
+        <Header as='h3'
+                style={{fontweight: 'bold', color: '#4F4F4F', fontSize: '1.4em'}}>
+          <div dangerouslySetInnerHTML={{__html:prices.faq[0].title}}></div>
+        </Header>
+        <p>
+          <div dangerouslySetInnerHTML={{__html:prices.faq[0].content}}></div>
+        </p>
+      </Grid.Column>
+      <Grid.Column width={7} style={{marginLeft:'1em'}}>
+        <Header as='h3'
+                style={{fontweight: 'bold', color: '#4F4F4F', fontSize: '1.4em'}}>
+          <div dangerouslySetInnerHTML={{__html:prices.faq[1].title}}></div>
+        </Header>
+        <p>
+          <div dangerouslySetInnerHTML={{__html:prices.faq[1].content}}></div>
+        </p>
+      </Grid.Column>
+    </Grid.Row>
+    <Grid.Row centered columns={2} style={{paddingTop:'2em'}}>
+      <Grid.Column width={7} style={{marginRight:'1em'}}>
+        <Header as='h3'
+                style={{fontweight: 'bold', color: '#4F4F4F', fontSize: '1.4em'}}>
+          <div dangerouslySetInnerHTML={{__html:prices.faq[2].title}}></div>
+        </Header>
+        <p>
+          <div dangerouslySetInnerHTML={{__html:prices.faq[2].content}}></div>
+        </p>
+      </Grid.Column>
+      <Grid.Column width={7} style={{marginLeft:'1em'}}>
+        <Header as='h3'
+                style={{fontweight: 'bold', color: '#4F4F4F', fontSize: '1.4em'}}>
+          <div dangerouslySetInnerHTML={{__html:prices.faq[3].title}}></div>
+        </Header>
+        <p>
+          <div dangerouslySetInnerHTML={{__html:prices.faq[3].content}}></div>
+        </p>
+      </Grid.Column>
+    </Grid.Row>
+  </Grid>
+</Segment>
 
 {/* Partie Projet spécifique */}
-          <Segment style={{padding: '3em 0em'}} vertical>
-              <Container style={{padding: '0em 0em'}} vertical textAlign='center'>
-                  <Header as='h2' textAlign='center' style={{
-                      margin: 'auto',
-                      marginTop: '1em',
-                      marginBottom: '1em',
-                      fontWeight: '200',
-                      fontSize: '3em',
-                      color: '#4F4F4F',
+<Segment style={{padding: '3em 0em'}} vertical>
+    <Container style={{padding: '0em 0em'}} vertical textAlign='center'>
+      <Grid textAlign='center'>
+        <Grid.Column only='computer' width={16}>
+          <Header as='h2' textAlign='center' style={{
+              margin: 'auto',
+              marginTop: '1em',
+              marginBottom: '1em',
+              fontWeight: '200',
+              fontSize: '3em',
+              color: '#4F4F4F',
 
-                  }}
-                  >
-                      <div dangerouslySetInnerHTML={{__html: prices.projetSpe.title}}></div>
+          }}
+          >
+              <div dangerouslySetInnerHTML={{__html: prices.projetSpe.title}}></div>
 
-                  </Header>
+          </Header>
 
-                  <p style={{
-                      fontSize: '1.2em',
-                      textAlign: 'justify',
-                      color: '#605E5E',
-                      marginTop: '3.6em',
-                      padding: '0em 5.2em',
-                      paddingBottom: '2em'
-                  }}>
-                      <div dangerouslySetInnerHTML={{__html: prices.projetSpe.content}}></div> 
-                  </p>
+          <p style={{
+              fontSize: '1.2em',
+              textAlign: 'justify',
+              color: '#605E5E',
+              marginTop: '3.6em',
+              padding: '0em 5.2em',
+              paddingBottom: '2em'
+          }}>
+              <div dangerouslySetInnerHTML={{__html: prices.projetSpe.content}}></div> 
+          </p>
+          <Link to={'contactez-nous'}>
+            <Button className='boutonMLC' textAlign='center' primary size='big' style={{marginTop: '1em'}}>
+                {prices.projetSpe.button}
+            </Button>
+          </Link>
+        </Grid.Column>
 
-                  <Button className='boutonMLC' textAlign='center' primary size='big' style={{marginTop: '1em'}}>
-                      {prices.projetSpe.button}
-                  </Button>
+        <Grid.Column only='mobile tablet' width={16}>
+          <Header as='h2' textAlign='center' style={{
+              margin: 'auto',
+              marginTop: '1em',
+              marginBottom: '1em',
+              fontWeight: '200',
+              fontSize: '2em',
+              color: '#4F4F4F',
 
-              </Container>
+          }}
+          >
+              <div dangerouslySetInnerHTML={{__html: prices.projetSpe.title}}></div>
 
-          </Segment>
+          </Header>
+
+          <p style={{
+              fontSize: '1.1em',
+              textAlign: 'justify',
+              color: '#605E5E',
+              marginTop: '3.6em',
+              padding: '0em 5.2em',
+              paddingBottom: '2em'
+          }}>
+              <div dangerouslySetInnerHTML={{__html: prices.projetSpe.content}}></div> 
+          </p>
+          <Link to={'contactez-nous'}>
+            <Button className='boutonMLC' textAlign='center' primary size='small' style={{marginTop: '1em'}}>
+                {prices.projetSpe.button}
+            </Button>
+          </Link>
+        </Grid.Column>
+      </Grid>
+
+    </Container>
+
+</Segment>
 
 
 

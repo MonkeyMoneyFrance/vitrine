@@ -31,7 +31,7 @@ import functions from '../config/functions';
 import firebase from '../config/initfirebase';
 import Fond from '../images/home/fond.png';
 import banqueImage from '../images/home/index';
-
+import {Link} from 'react-router-dom';
 import Slider from 'react-slick';
 import ChatBot from './chatbot';
 
@@ -388,7 +388,7 @@ class Features extends Component {
                                 <Grid.Column width={10} only='computer'  verticalAlign='middle' centered textAlign='center' style={{marginTop: '1em', marginBottom: '2em'}}>
                                     <Header
                                         as='h2'
-                                        content={features.title}
+                                        content={features.mainTitle}
                                         inverted
                                         style={{
                                             fontSize: '3.5em',
@@ -400,7 +400,7 @@ class Features extends Component {
                                             letterSpacing: '-0.03em'
                                         }}
                                     />
-                                    <Header  as='h2' content={features.undertitle} style={{fontSize: '1.7em', marginTop: '1em', textAlign: 'center', fontWeight: 'normal',
+                                    <Header  as='h2' content={features.underTitle} style={{fontSize: '1.7em', marginTop: '1em', textAlign: 'center', fontWeight: 'normal',
                                      color: 'white'}}
                                     />
                                     <Image size='tiny' centered src={banqueImage[features.imageTitle]} style={{marginTop:'13em'}}>
@@ -415,7 +415,7 @@ class Features extends Component {
                                 <Grid.Column width={16} only='mobile tablet'  verticalAlign='middle' centered textAlign='center' style={{marginTop: '1em', marginBottom: '2em'}}>
                                     <Header
                                         as='h2'
-                                        content={features.title}
+                                        content={features.mainTitle}
                                         inverted
                                         style={{
                                             fontSize: '2.5em',
@@ -427,7 +427,7 @@ class Features extends Component {
                                             letterSpacing: '-0.03em'
                                         }}
                                     />
-                                    <Header  as='h2' content={features.undertitle} style={{fontSize: '1.3em', marginTop: '1em', textAlign: 'center', fontWeight: 'normal',
+                                    <Header  as='h2' content={features.underTitle} style={{fontSize: '1.3em', marginTop: '1em', textAlign: 'center', fontWeight: 'normal',
                                      color: 'white'}}
                                     />
                                     <Image size='tiny' centered src={banqueImage[features.imageTitle]} style={{marginTop:'11em'}}>
