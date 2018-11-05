@@ -1,34 +1,16 @@
 import React, {Component} from 'react'
-import {
-  BrowserRouter as Router,
-  Route,Link,
-  Switch
-} from 'react-router-dom'
-import {
-  Button,
-  Container,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  List,
-  Menu,
-  Segment,
-  Visibility,
-  Dropdown,
-  Transition,
-  Sidebar,
-  Responsive
-} from 'semantic-ui-react'
+import {BrowserRouter as Router,Route,Link,Switch} from 'react-router-dom'
+import {Flag,Button,Container,Divider,Grid,Header,Icon,Image,List,Menu,Segment,Visibility,Dropdown,Transition,Sidebar,Responsive} from 'semantic-ui-react'
 import logo from '../images/logotypobleu.png'
+import genericFb from '../functions/genericFb'
 
 export default  class TopMenu extends Component {
 
   constructor(props){
     super(props)
     this.shouldDisplay = false
-
+    this.language = genericFb.getLanguage()
+    this.state = {dropDownLanguageOpen:false}
   }
   render(){
 
@@ -60,6 +42,21 @@ export default  class TopMenu extends Component {
             <Link to='monkeymoney'>
               <Menu.Item active={'/monkeymoney'==this.props.path} >Monkey Money</Menu.Item>
             </Link>
+
+            {/****************************************************/}
+            <Menu.Item link icon='globe'>
+                  <Dropdown icon={<Flag name='fr'/>}>
+                    <Dropdown.Menu>
+                      <Dropdown.Item flag='fr' onClick={()=>{
+
+                        }}/>
+                      <Dropdown.Item flag='gb' onClick={()=>{
+
+                        }}/>
+                    </Dropdown.Menu>
+                  </Dropdown>
+            </Menu.Item>
+
           </Menu.Menu>
           </Menu>
         </Grid.Column>

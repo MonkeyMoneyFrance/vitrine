@@ -1,23 +1,5 @@
 import React, {Component} from 'react';
-import {
-    Button,
-    Container,
-    Divider,
-    Grid,
-    Header,
-    Icon,
-    Image,
-    List,
-    Menu,
-    Segment,
-    Visibility,
-    Transition,
-    Card,
-    Sidebar
-
-
-} from 'semantic-ui-react'
-
+import {Button,Container,Divider,Grid,Header,Icon,Image,List,Menu,Segment,Visibility,Transition,Card,Sidebar} from 'semantic-ui-react'
 import TopMenu from '../components/topmenu'
 import SidebarMenu from '../components/sidebar'
 import headerhome from '../images/headerHome.png'

@@ -20,7 +20,7 @@ import firebase from '../config/initfirebase'
 import TopMenu from '../components/topmenu'
 import SidebarMenu from '../components/sidebar';
 import swal from 'sweetalert'
-import '../contact.css'
+import '../styles/contact.css'
 import {Link} from 'react-router-dom'
 
 

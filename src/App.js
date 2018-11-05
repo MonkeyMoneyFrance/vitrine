@@ -1,31 +1,16 @@
 import React, {Component} from 'react'
-import {
-  BrowserRouter as Router,
-  Route,Link,
-  Switch
-} from 'react-router-dom'
+import {BrowserRouter as Router,Route,Link,Switch} from 'react-router-dom'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import routes from './config/routes'
-import {
-  Button,
-  Container,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  List,
-  Menu,
-  Segment,
-  Visibility,Sidebar,Dimmer,Loader
-} from 'semantic-ui-react'
+import {Button,Container,Divider,Grid,Header,Icon,Image,List,Menu,Segment,Visibility,Sidebar,Dimmer,Loader} from 'semantic-ui-react'
 import logo from './images/logo.png'
 import firebase from './config/initfirebase'
 import SidebarMenu from './components/sidebar'
 import TopMenu from './components/topmenu'
 // import TopMenuMobile from './components/topmenumobile'
-import './App.css';
+import './styles/App.css';
 import 'semantic-ui-css/semantic.min.css';
+import genericFb from './functions/genericFb'
 
 
 
@@ -41,7 +26,9 @@ class App extends Component {
       var website = snapshot.val()
         self.setState({website})
     })
+    genericFb.retrieveLanguageFile()
   }
+  
   render() {
     if (!this.state.website) return (<Dimmer><Loader /></Dimmer>)
     var self = this
