@@ -34,6 +34,7 @@ import banqueImage from '../images/home/index';
 import {Link} from 'react-router-dom';
 import Slider from 'react-slick';
 import ChatBot from './chatbot';
+import genericFb from '../functions/genericFb'
 
 
 
@@ -155,7 +156,7 @@ class Features extends Component {
                                                 <Grid.Row textAlign='center' style={{paddingBottom:'0.5em'}}>
                                                   <Button animated='vertical' onClick={() => this.CardClick(object)}
                                                     >
-                                                    <Button.Content textAlign='center' visible>Fonctionnalités</Button.Content>
+                                                    <Button.Content textAlign='center' visible>{genericFb.replaceString('%features')}</Button.Content>
                                                     <Button.Content hidden>
                                                       <Icon name='down arrow' />
                                                     </Button.Content>
@@ -187,7 +188,7 @@ class Features extends Component {
                                                 </Card.Content>
                                                 <Grid.Row textAlign='center' style={{paddingBottom:'0.5em'}}>
                                                   <Button animated='vertical' size='small' onClick={() => this.CardClick(object)}>
-                                                    <Button.Content textAlign='center' visible>Fonctionnalités</Button.Content>
+                                                    <Button.Content textAlign='center' visible>{genericFb.replaceString('%features')}</Button.Content>
                                                     <Button.Content hidden>
                                                       <Icon name='down arrow' />
                                                     </Button.Content>

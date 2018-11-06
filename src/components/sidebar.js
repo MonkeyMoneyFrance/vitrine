@@ -22,6 +22,7 @@ import {
   Responsive
 } from 'semantic-ui-react'
 import logo from '../images/logotypobleu.png'
+import genericFb from '../functions/genericFb'
 
 export default  class SidebarMenu extends Component {
   constructor(props){
@@ -56,28 +57,28 @@ export default  class SidebarMenu extends Component {
         <Menu.Item className='accordion-header'>
                   <Menu.Menu >
                     <Link to={'/'}>
-                      <Menu.Item as='a' className='menuDropdown'>L'essentiel</Menu.Item>
+                      <Menu.Item as='a' className='menuDropdown'>{genericFb.replaceString('%presentation')}</Menu.Item>
                     </Link>
                   </Menu.Menu>
                 </Menu.Item>
                 <Menu.Item className='accordion-header'>
                   <Menu.Menu >
                     <Link to={'fonctionnalites'}>
-                      <Menu.Item as='a' className='menuDropdown'>Fonctionnalites</Menu.Item>
+                      <Menu.Item as='a' className='menuDropdown'>{genericFb.replaceString('%features')}</Menu.Item>
                     </Link>
                   </Menu.Menu>
                 </Menu.Item>
                 <Menu.Item className='accordion-header'>
                   <Menu.Menu >
                     <Link to={'offres' }>
-                      <Menu.Item as='a' className='menuDropdown'>Offres</Menu.Item>
+                      <Menu.Item as='a' className='menuDropdown'>{genericFb.replaceString('%offers')}</Menu.Item>
                     </Link>
                   </Menu.Menu>
                 </Menu.Item>
                 <Menu.Item className='accordion-header'>
                   <Menu.Menu >
                     <Link to={'monnaielocale' }>
-                      <Menu.Item as='a' className='menuDropdown'>Monnaie Locale</Menu.Item>
+                      <Menu.Item as='a' className='menuDropdown'>{genericFb.replaceString('%localCurrencies')}</Menu.Item>
                     </Link>
                   </Menu.Menu>
                 </Menu.Item>

@@ -13,8 +13,6 @@ import 'semantic-ui-css/semantic.min.css';
 import genericFb from './functions/genericFb'
 
 
-
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -22,13 +20,16 @@ class App extends Component {
   }
   componentWillMount(){
     var self = this
-    firebase.database().ref().on('value', function (snapshot) {
-      var website = snapshot.val()
+    genericFb.getLanguage(function(language){
+      console.log("language="+language)
+      genericFb.retrieveLanguageFile(language)
+      firebase.database().ref(language).on('value', function (snapshot) {
+        var website = snapshot.val()
         self.setState({website})
+      })
     })
-    genericFb.retrieveLanguageFile()
   }
-  
+
   render() {
     if (!this.state.website) return (<Dimmer><Loader /></Dimmer>)
     var self = this

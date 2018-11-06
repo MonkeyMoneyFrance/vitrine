@@ -15,6 +15,7 @@ import {
   Dropdown,
   TextArea,
 } from 'semantic-ui-react'
+import genericFb from '../functions/genericFb'
 
   export default  class Footer extends Component {
     render(){
@@ -33,12 +34,12 @@ import {
                       </List.Item>
                       <List.Item>
                         <Link to={'fonctionnalites'}>
-                          <div className='linkFooter'>Fonctionnalités</div>
+                          <div className='linkFooter'>{genericFb.replaceString('%features')}</div>
                         </Link>
                       </List.Item>
                       <List.Item>
                         <Link to={'offres'}>
-                          <div className='linkFooter'>Offres</div>
+                          <div className='linkFooter'>{genericFb.replaceString('%offers')}</div>
                         </Link>
                       </List.Item>
                     </List>

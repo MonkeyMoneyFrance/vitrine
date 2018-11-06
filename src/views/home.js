@@ -12,6 +12,7 @@ import banqueImage from '../images/home/index'
 import Fond from '../images/home/fond.png'
 import ChatBot from './chatbot'
 import {Link} from 'react-router-dom'
+import genericFb from '../functions/genericFb'
 
 class Home extends Component {
     constructor(props) {

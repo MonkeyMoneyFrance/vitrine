@@ -5,7 +5,7 @@ var langue = null;
 
 
 
-function getLanguage() {
+function getLanguage(callback) {
 
      let language;
      if(localStorage.getItem("language")){
@@ -17,27 +17,17 @@ function getLanguage() {
      else{
        language = "FR"
      }
-     return language;
+     callback(language)
  }
 
-function retrieveLanguageFile() {
-    let language;
-    if(localStorage.getItem("language")){
-    language = localStorage.getItem("language");
-    }
-    else if(navigator.language.substring(0, 2).toUpperCase() == 'FR' || navigator.language.substring(0, 2).toUpperCase() == 'EN'){
-        language = navigator.language.substring(0, 2).toUpperCase()
-    }
-    else{
-      language = "FR"
-    }
+function retrieveLanguageFile(language) {
     //let language = "FR"
     if (localStorage.getItem("langFile"+language)) {
-
+      console.log("ici")
       langue = JSON.parse(localStorage.getItem("langFile"+language))
 
     } else {
-
+      console.log("là")
       let ref = firebase.storage().ref("Lang").child(language+'/vitrineConfig.json');
       ref.getDownloadURL().then(function (url) {
 
@@ -51,7 +41,7 @@ function retrieveLanguageFile() {
           xhr.send();
 
       }).catch(function (error) {
-          console.log(error);
+          console.log("Echec du chargement du dictionnaire");
       })
     }
 }

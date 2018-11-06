@@ -9,8 +9,7 @@ export default  class TopMenu extends Component {
   constructor(props){
     super(props)
     this.shouldDisplay = false
-    this.language = genericFb.getLanguage()
-    this.state = {dropDownLanguageOpen:false}
+    this.state = {}
   }
   render(){
 
@@ -28,33 +27,35 @@ export default  class TopMenu extends Component {
           </Menu.Menu>
           <Menu.Menu position='right' verticalAlign='middle' className='menuText' style={{color:'#696868'}} >
             <Link to='/'>
-              <Menu.Item active={'/'==this.props.path}>L'essentiel</Menu.Item>
+              <Menu.Item active={'/'==this.props.path}>{genericFb.replaceString('%presentation')}</Menu.Item>
             </Link>
             <Link to='fonctionnalites'>
-              <Menu.Item active={'/fonctionnalites'==this.props.path} >Fonctionnalites</Menu.Item>
+              <Menu.Item active={'/fonctionnalites'==this.props.path} >{genericFb.replaceString('%features')}</Menu.Item>
             </Link>
             <Link to='offres'>
-              <Menu.Item active={'/offres'==this.props.path} >Offres</Menu.Item>
+              <Menu.Item active={'/offres'==this.props.path} >{genericFb.replaceString('%offers')}</Menu.Item>
             </Link>
             <Link to='monnaielocale'>
-              <Menu.Item active={'/monnaielocale'==this.props.path} >Monnaie Locale</Menu.Item>
+              <Menu.Item active={'/monnaielocale'==this.props.path} >{genericFb.replaceString('%localCurrencies')}</Menu.Item>
             </Link>
             <Link to='monkeymoney'>
               <Menu.Item active={'/monkeymoney'==this.props.path} >Monkey Money</Menu.Item>
             </Link>
 
-            {/****************************************************/}
-            <Menu.Item link icon='globe'>
-                  <Dropdown icon={<Flag name='fr'/>}>
-                    <Dropdown.Menu>
-                      <Dropdown.Item flag='fr' onClick={()=>{
-
-                        }}/>
-                      <Dropdown.Item flag='gb' onClick={()=>{
-
-                        }}/>
-                    </Dropdown.Menu>
-                  </Dropdown>
+            {/***********************         Language Dropdown         *****************************/}
+            <Menu.Item style={{alignItems:'flex-start'}}>
+              <Dropdown icon={(localStorage.getItem("language")=='FR') ? <Flag name='fr'/> : <Flag name='gb'/>}>
+                <Dropdown.Menu>
+                  <Dropdown.Item flag='fr' onClick={()=>{
+                    localStorage.setItem("language",'FR')
+                    window.location.reload()
+                    }}/>
+                  <Dropdown.Item flag='gb' onClick={()=>{
+                    localStorage.setItem("language",'EN')
+                    window.location.reload()
+                    }}/>
+                </Dropdown.Menu>
+              </Dropdown>
             </Menu.Item>
 
           </Menu.Menu>
@@ -67,10 +68,30 @@ export default  class TopMenu extends Component {
               <Image src={logo}  size='small' centered style={{maxWidth:'150px'}}  />
           </Link>
         </Menu.Menu>
-        <Menu.Menu  position='right' ><Menu.Item icon='sidebar' onClick={() => {
+        <Menu.Menu  position='right' >
+          {/********************        Language Dropdown                  *************/}
+          <Menu.Item >
+            <Dropdown style={{
+                height:'auto',
+              }} icon={(localStorage.getItem("language")=='FR') ? <Flag name='fr'/> : <Flag name='gb'/>}>
+              <Dropdown.Menu>
+                <Dropdown.Item flag='fr' onClick={()=>{
+                  localStorage.setItem("language",'FR')
+                  window.location.reload()
+                  }}/>
+                <Dropdown.Item flag='gb' onClick={()=>{
+                  localStorage.setItem("language",'EN')
+                  window.location.reload()
+                  }}/>
+              </Dropdown.Menu>
+            </Dropdown>
+          </Menu.Item>
+
+          <Menu.Item icon='sidebar' onClick={() => {
               this.props.openSideBar(!this.shouldDisplay)
               this.shouldDisplay = !this.shouldDisplay
-        }} /></Menu.Menu>
+        }} />
+      </Menu.Menu>
       </Menu>
     </Grid.Column>
     </Grid>
