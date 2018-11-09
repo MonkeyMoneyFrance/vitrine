@@ -22,6 +22,7 @@ import SidebarMenu from '../components/sidebar';
 import swal from 'sweetalert'
 import '../styles/contact.css'
 import {Link} from 'react-router-dom'
+import genericFb from '../functions/genericFb'
 
 
 
@@ -52,7 +53,7 @@ class ContactForm extends Component {
         !message.detail ||
         !message.text
       ) {
-        this.setState({error:'Vous devez remplir tous les champs',loading:false})
+        this.setState({error:genericFb.replaceString('%formError'),loading:false})
       } else {
 
         var xhttp = new XMLHttpRequest();
@@ -75,7 +76,7 @@ class ContactForm extends Component {
               self.setState({message})
               self.setState({loading:false})
             } else {
-              swal("Erreur à l'envoi : " + data.response)
+              swal(genericFb.replaceString('%errorSend') + data.response)
             }
 
           }
@@ -101,7 +102,7 @@ class ContactForm extends Component {
       var error = null
 
       if (!data.value || data.value == '') { // le champ est vide
-        errors[data.id] = {error:true,errorMsg:'Vous devez remplir tous les champs'}
+        errors[data.id] = {error:true,errorMsg:genericFb.replaceString('%formError')}
         message[data.id]=null
       } else {
         errors[data.id] = {error:false,errorMsg:null}
@@ -129,13 +130,13 @@ class ContactForm extends Component {
       var error = null
 
       if (!e.target.value ||e.target.value == '') { // le champ est vide
-        errors[e.target.id] = {error:true,errorMsg:'Vous devez remplir tous les champs'}
+        errors[e.target.id] = {error:true,errorMsg:genericFb.replaceString('%formError')}
         message[e.target.id]=null
       } else if (e.target.type == 'email' && e.target.validity.valid == false) {
-        errors[e.target.id] = {error:true,errorMsg:"Cet email n'est pas valide"}
+        errors[e.target.id] = {error:true,errorMsg:genericFb.replaceString('%wrongEmail')}
         message[e.target.id]=null
       } else if (e.target.type == 'tel' && e.target.validity.valid == false) {
-        errors[e.target.id] = {error:true,errorMsg:"Ce Téléphone n'est pas valide"}
+        errors[e.target.id] = {error:true,errorMsg:genericFb.replaceString('%wrongPhone')}
         message[e.target.id]=null
       } else {
         errors[e.target.id] = {error:false,errorMsg:null}

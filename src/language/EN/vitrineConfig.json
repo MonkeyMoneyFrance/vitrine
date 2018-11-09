@@ -7,5 +7,11 @@
   "%home":"Home",
   "%joinUs":"Join Us",
   "%company":"Company",
-  "%socialNetworks":"Social Networks"
+  "%socialNetworks":"Social Networks",
+  "%formError":"You have to fill all the fields in",
+  "%errorSend":"Error when sending",
+  "%wrongEmail":"This E-mail is not valid",
+  "%wrongPhone":"This phone number is not valid",
+  "%contactUs":"Contact Us",
+  "%fillIn":"Please fill the following informations in, and we will answer you as soon as possible!"
 }

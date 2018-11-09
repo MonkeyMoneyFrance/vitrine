@@ -7,6 +7,12 @@
   "%home":"Accueil",
   "%joinUs":"Rejoignez-nous",
   "%company":"Société",
-  "%socialNetworks":"Réseaux Sociaux"
+  "%socialNetworks":"Réseaux Sociaux",
+  "%formError":"Vous devez remplir tous les champs",
+  "%errorSend":"Erreur à l'envoi",
+  "%wrongEmail":"Cet E-mail n'est pas valide",
+  "%wrongPhone":"Ce numéro de téléphone n'est pas valide",
+  "%contactUs":"Contactez-nous",
+  "%fillIn":"Remplissez les informations suivantes et nous vous répondrons le plus rapidement possible !"
 
 }
