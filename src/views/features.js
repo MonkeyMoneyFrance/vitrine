@@ -548,10 +548,12 @@ class Features extends Component {
                                     <div dangerouslySetInnerHTML={{__html: features.endPage.title}}></div>
                                 </Header>
 
+                                <Link to={'contactez-nous'}>
                                 <Button className='MainButton' as='a' size='big' style={{marginTop: '1em'}}>
                                     {features.endPage.buttontitle}
                                     <Icon name='right arrow'/>
                                 </Button>
+                              </Link>
 
                                 <Header
                                     as='h2'
@@ -580,10 +582,12 @@ class Features extends Component {
                                     <div dangerouslySetInnerHTML={{__html: features.endPage.title}}></div>
                                 </Header>
 
+                                <Link to={'contactez-nous'}>
                                 <Button className='MainButton' as='a' size='small' style={{marginTop: '1em'}}>
                                     {features.endPage.buttontitle}
                                     <Icon name='right arrow'/>
                                 </Button>
+                              </Link>
 
                                 <Header
                                     as='h2'
