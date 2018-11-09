@@ -56,7 +56,9 @@ class Home extends Component {
                     style={{
                         minHeight: 600,
                         padding: '1em 0em',
-                        background: `url(${Fond}) no-repeat`,
+                        background: `url(${Fond})`,
+                        backgroundRepeat: 'no-repeat',
+                        // background: `url(${Fond}) no-repeat`,
                         backgroundSize: 'cover'
                     }}
                     >

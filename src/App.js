@@ -19,6 +19,7 @@ import {
   Segment,
   Visibility,Sidebar,Dimmer,Loader
 } from 'semantic-ui-react'
+import ScrollToTop from './scrolltotop'
 import logo from './images/logo.png'
 import firebase from './config/initfirebase'
 import SidebarMenu from './components/sidebar'
@@ -47,6 +48,7 @@ class App extends Component {
     var self = this
       return (
         <Router>
+          <ScrollToTop>
           <div id='app' className="App" style={{height:'100%',width:'100%'}} >
 
 
@@ -68,6 +70,7 @@ class App extends Component {
               </Switch>
 
           </div>
+        </ScrollToTop>
         </Router>
       )
 
