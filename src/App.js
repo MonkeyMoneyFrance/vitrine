@@ -20,9 +20,8 @@ class App extends Component {
   }
   componentWillMount(){
     var self = this
-    genericFb.getLanguage(function(language){
-      console.log("language="+language)
-      genericFb.retrieveLanguageFile(language)
+    let language=genericFb.getLanguage()
+    genericFb.setDictionary(language, () => {
       firebase.database().ref(language).on('value', function (snapshot) {
         var website = snapshot.val()
         self.setState({website})

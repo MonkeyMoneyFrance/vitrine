@@ -1,11 +1,12 @@
 import firebase from '../config/initfirebase'
+import indexDictionnary from '../language/index'
 
 
-var langue = null;
+var dictionary = null;
 
 
 
-function getLanguage(callback) {
+function getLanguage() {
 
      let language;
      if(localStorage.getItem("language")){
@@ -17,52 +18,38 @@ function getLanguage(callback) {
      else{
        language = "FR"
      }
-     callback(language)
+     return language;
  }
 
-function retrieveLanguageFile(language) {
-    //let language = "FR"
-    if (localStorage.getItem("langFile"+language)) {
-      console.log("ici")
-      langue = JSON.parse(localStorage.getItem("langFile"+language))
+ function setDictionary(language,callback) {
+   //language in {'FR','EN',...}
+   dictionary = indexDictionnary[language]
 
-    } else {
-      console.log("là")
-      let ref = firebase.storage().ref("Lang").child(language+'/vitrineConfig.json');
-      ref.getDownloadURL().then(function (url) {
-
-          var xhr = new XMLHttpRequest();
-          xhr.responseType = 'json';
-          xhr.onload = function (event) {
-              langue = xhr.response;
-              localStorage.setItem('langFile'+language, JSON.stringify(langue))
-          };
-          xhr.open('GET', url);
-          xhr.send();
-
-      }).catch(function (error) {
-          console.log("Echec du chargement du dictionnaire");
-      })
-    }
-}
+   callback()
+ }
 
 
-function replaceString(value) {
 
-    if (!value) return
+ function replaceString(value) {
 
-    var array = value.match(/(%)\w+/g);
+     if (!value) return
 
-    if (langue !== null) {
+     var array = value.match(/(%)\w+/g);
 
-        for (var i in array) {
-          //on teste l'existence de la traduction
-          if (langue[array[i]]) value = value.replace(new RegExp(array[i], 'g'), langue[array[i]])
-        }
-    }
+     if (dictionary !== null) {
 
-    return value;
-}
+         for (var i in array) {
+           //on teste l'existence de la traduction
+           if (dictionary[array[i]]) value = value.replace(new RegExp(array[i], 'g'), dictionary[array[i]])
+         }
+     }
+
+     var arrayEnv = value.match(/(REACT_APP)\w+/g)
+     for (var i in arrayEnv) {
+         value = value.replace(new RegExp(arrayEnv[i], 'g'), process.env[arrayEnv[i]]);
+     }
+     return value;
+ }
 
 
 // function format(timestamp,format) {
@@ -76,6 +63,6 @@ function replaceString(value) {
 
 export default {
     replaceString,
-    retrieveLanguageFile,
+    setDictionary,
     getLanguage,
 }

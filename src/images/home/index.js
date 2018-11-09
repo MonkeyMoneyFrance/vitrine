@@ -70,12 +70,19 @@ import circulararrow from '../localcurrency/circulararrow.png'
 import photoNico from '../company/photoNico.png'
 import photoGeo from '../company/photoGeo.png'
 import photoManu from '../company/photoManu.png'
-import photoMory from '../company/photoMory.png'
+import photoHenri from '../company/photoHenri.png'
+import photoValentin from '../company/photoValentin.png'
 import logoNovimpact from '../company/logoNovimpact.png'
 import logoVillage from '../company/logoVillage.png'
 import logoAntropia from '../company/logoAntropia.png'
 import logoFabrique from '../company/logoFabrique.png'
 import logoMouves from '../company/logoMouves.png'
+import logoAgro from '../company/logoAgro.png'
+import logoOuiShare from '../company/logoOuiShare.png'
+import logoRadioVillage from '../company/logoRadioVillage.png'
+import logoDemainLaVille from '../company/logoDemainLaVille.png'
+
+
 
 var icons = {
   src0 : puzzle,
@@ -142,14 +149,17 @@ var icons = {
   photoNico : photoNico,
   photoGeo : photoGeo,
   photoManu : photoManu,
-  photoMory : photoMory,
+  photoHenri : photoHenri,
+  photoValentin : photoValentin,
   logoNovimpact : logoNovimpact,
   logoVillage : logoVillage,
   logoAntropia : logoAntropia,
   logoFabrique : logoFabrique,
   logoMouves : logoMouves,
-
-
+  logoAgro : logoAgro,
+  logoOuiShare : logoOuiShare,
+  logoRadioVillage : logoRadioVillage,
+  logoDemainLaVille : logoDemainLaVille
 
 }
 
