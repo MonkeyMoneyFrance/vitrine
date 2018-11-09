@@ -66,8 +66,8 @@ import genericFb from '../functions/genericFb'
                   </Grid.Column>
                   <Grid.Column width={7}>
                     <Header as='h4' inverted>{genericFb.replaceString('%socialNetworks')}</Header>
-                    <Link to={'https://www.facebook.com/MonkeyMoneyFrance/'}><Icon className='linkIcon' size='large' name='facebook f' link></Icon></Link>
-                    <Link to={'https://twitter.com/_MonkeyMoney_'}><Icon className='linkIcon' size='large' name='twitter' link></Icon></Link>
+                    <Link to={'https://www.facebook.com/MonkeyMoneyFrance/'} target="_blank"><Icon className='linkIcon' size='large' name='facebook f' link></Icon></Link>
+                    <Link to={'https://twitter.com/_MonkeyMoney_'} target="_blank"><Icon className='linkIcon' size='large' name='twitter' link></Icon></Link>
                   </Grid.Column>
                 </Grid.Row>
               </Grid>

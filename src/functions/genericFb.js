@@ -4,12 +4,10 @@ import indexDictionnary from '../language/index'
 
 var dictionary = null;
 
-
-
 function getLanguage() {
 
-     let language;
-     if(localStorage.getItem("language")){
+    let language
+     if(localStorage.getItem("language")=='FR'||localStorage.getItem("language")=='EN'){
        language = localStorage.getItem("language");
      }
      else if(navigator.language.substring(0, 2).toUpperCase() == 'FR' || navigator.language.substring(0, 2).toUpperCase() == 'EN'){
@@ -18,7 +16,8 @@ function getLanguage() {
      else{
        language = "FR"
      }
-     return language;
+     localStorage.setItem("language",language)
+     return language
  }
 
  function setDictionary(language,callback) {

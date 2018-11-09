@@ -48,6 +48,7 @@ class Features extends Component {
         this.wasLoad = false;
         this.next = this.next.bind(this);
         this.previous = this.previous.bind(this);
+        this.handleContextRef = this.handleContextRef.bind(this)
     }
 
 
@@ -59,7 +60,9 @@ class Features extends Component {
         this.slider.slickPrev();
     }
 
-    handleContextRef = contextRef => this.setState({contextRef: {contextRef}});
+    handleContextRef(contextRef){
+      this.setState({contextRef: {contextRef}})
+    }
 
     scrollTo(data) {
         this.setState({activeItem: data.name});
@@ -548,10 +551,12 @@ class Features extends Component {
                                     <div dangerouslySetInnerHTML={{__html: features.endPage.title}}></div>
                                 </Header>
 
+                                <Link to={'contactez-nous'}>
                                 <Button className='MainButton' as='a' size='big' style={{marginTop: '1em'}}>
                                     {features.endPage.buttontitle}
                                     <Icon name='right arrow'/>
                                 </Button>
+                              </Link>
 
                                 <Header
                                     as='h2'
@@ -580,10 +585,12 @@ class Features extends Component {
                                     <div dangerouslySetInnerHTML={{__html: features.endPage.title}}></div>
                                 </Header>
 
+                                <Link to={'contactez-nous'}>
                                 <Button className='MainButton' as='a' size='small' style={{marginTop: '1em'}}>
                                     {features.endPage.buttontitle}
                                     <Icon name='right arrow'/>
                                 </Button>
+                              </Link>
 
                                 <Header
                                     as='h2'

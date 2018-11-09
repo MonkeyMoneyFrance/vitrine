@@ -30,7 +30,7 @@ button {
 .menuText .item {
   font-weight: bold !important;
   font-size: 1.03em ;
-  margin-top: 0.9em;
+  margin-top: 0.5em;
   margin-right: 0.5em;
   padding: 0.4em 0.4em 0.4em 0.4em !important;
   color : #4F4F4F !important;
@@ -121,6 +121,29 @@ button {
   align-items: center;
   justify-content: center;
   margin-bottom: 2em;
+  opacity : 0.6 !important;
+  filter: grayscale(100%);
+}
+
+.divDisplay:hover{
+  opacity : 1 !important;
+  filter: grayscale(0%);
+}
+
+.divDisplay2{
+  height: 120px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+  opacity : 0.6 !important;
+  filter: grayscale(100%);
+}
+
+.divDisplay2:hover{
+  opacity: 1 !important;
+  filter: grayscale(0%);
 }
 
 .linkFooter{
