@@ -7,6 +7,7 @@ import logo from './images/logo.png'
 import firebase from './config/initfirebase'
 import SidebarMenu from './components/sidebar'
 import TopMenu from './components/topmenu'
+import ScrollToTop from './scrolltotop'
 // import TopMenuMobile from './components/topmenumobile'
 import './styles/App.css';
 import 'semantic-ui-css/semantic.min.css';

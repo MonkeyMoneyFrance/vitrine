@@ -23,7 +23,7 @@ function getMeta(meta,host,url){
 		if (url == null || !url ||  url == '') reject('no metadata')
 		else {
 
-			admin.database().ref('publish/'+url).once('value',function(snapshot){
+			admin.database().ref('FR/publish/'+url).once('value',function(snapshot){
 				var org = snapshot.val()
 				if (org == null) reject('no metadata')
 				else {
@@ -45,7 +45,7 @@ function getMeta(meta,host,url){
 function getMetaGlobal(url,host){
 	return new Promise(function(resolve,reject){
 
-			admin.database().ref('tuning/').once('value',function(snapshot){
+			admin.database().ref('FR/tuning/').once('value',function(snapshot){
 				var org = snapshot.val()
 				if (org == null) reject("<title></title>")
 				else {
