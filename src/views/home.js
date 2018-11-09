@@ -1,23 +1,5 @@
 import React, {Component} from 'react';
-import {
-    Button,
-    Container,
-    Divider,
-    Grid,
-    Header,
-    Icon,
-    Image,
-    List,
-    Menu,
-    Segment,
-    Visibility,
-    Transition,
-    Card,
-    Sidebar
-
-
-} from 'semantic-ui-react'
-
+import {Button,Container,Divider,Grid,Header,Icon,Image,List,Menu,Segment,Visibility,Transition,Card,Sidebar} from 'semantic-ui-react'
 import TopMenu from '../components/topmenu'
 import SidebarMenu from '../components/sidebar'
 import headerhome from '../images/headerHome.png'
@@ -30,6 +12,7 @@ import banqueImage from '../images/home/index'
 import Fond from '../images/home/fond.png'
 import ChatBot from './chatbot'
 import {Link} from 'react-router-dom'
+import genericFb from '../functions/genericFb'
 
 class Home extends Component {
     constructor(props) {
@@ -668,10 +651,12 @@ class Home extends Component {
                                     <div dangerouslySetInnerHTML={{__html: home.items[4].title}}></div>
                                 </Header>
 
-                                <Button className='MainButton' as='a' size='big' style={{marginTop: '1em'}}>
+                                <Link to={'contactez-nous'}>
+                                  <Button className='MainButton' as='a' size='big' style={{marginTop: '1em'}}>
                                     {home.items[4].buttontitle}
                                     <Icon name='right arrow'/>
-                                </Button>
+                                  </Button>
+                                </Link>
 
                                 <Header
                                     as='h2'
@@ -700,10 +685,12 @@ class Home extends Component {
                                     <div dangerouslySetInnerHTML={{__html: home.items[4].title}}></div>
                                 </Header>
 
+                                <Link to={'contactez-nous'}>
                                 <Button className='MainButton' as='a' size='small' style={{marginTop: '1em'}}>
                                     {home.items[4].buttontitle}
                                     <Icon name='right arrow'/>
                                 </Button>
+                              </Link>
 
                                 <Header
                                     as='h2'

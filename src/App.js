@@ -1,34 +1,16 @@
 import React, {Component} from 'react'
-import {
-  BrowserRouter as Router,
-  Route,Link,
-  Switch
-} from 'react-router-dom'
+import {BrowserRouter as Router,Route,Link,Switch} from 'react-router-dom'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import routes from './config/routes'
-import {
-  Button,
-  Container,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  List,
-  Menu,
-  Segment,
-  Visibility,Sidebar,Dimmer,Loader
-} from 'semantic-ui-react'
-import ScrollToTop from './scrolltotop'
+import {Button,Container,Divider,Grid,Header,Icon,Image,List,Menu,Segment,Visibility,Sidebar,Dimmer,Loader} from 'semantic-ui-react'
 import logo from './images/logo.png'
 import firebase from './config/initfirebase'
 import SidebarMenu from './components/sidebar'
 import TopMenu from './components/topmenu'
 // import TopMenuMobile from './components/topmenumobile'
-import './App.css';
+import './styles/App.css';
 import 'semantic-ui-css/semantic.min.css';
-
-
+import genericFb from './functions/genericFb'
 
 
 class App extends Component {
@@ -38,11 +20,15 @@ class App extends Component {
   }
   componentWillMount(){
     var self = this
-    firebase.database().ref().on('value', function (snapshot) {
-      var website = snapshot.val()
+    let language=genericFb.getLanguage()
+    genericFb.setDictionary(language, () => {
+      firebase.database().ref(language).on('value', function (snapshot) {
+        var website = snapshot.val()
         self.setState({website})
+      })
     })
   }
+
   render() {
     if (!this.state.website) return (<Dimmer><Loader /></Dimmer>)
     var self = this

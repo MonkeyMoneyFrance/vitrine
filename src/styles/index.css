@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+  font-family: 'Avenir','Lato' !important;
+  -webkit-font-smoothing: antialiased  !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+h1,h2,h3,span {
+  font-family: 'Avenir', 'Lato' !important;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased  !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+button {
+  font-weight: normal;
+}
+
+.menuTextBlanc a {
+  font-weight: bold !important;
+  font-size: 1.03em ;
+  padding: 5px !important;
+  margin-top: 0.6em;
+  margin-left: 0.2em;
+  margin-right:0.1em;
+  }
+
+.menuText .item {
+  font-weight: bold !important;
+  font-size: 1.03em ;
+  margin-top: 0.5em;
+  margin-right: 0.5em;
+  padding: 0.4em 0.4em 0.4em 0.4em !important;
+  color : #4F4F4F !important;
+}
+
+.menuText .item:hover{
+  background-color: rgba(94, 196, 169,0.3) !important;
+  border-radius: 5px !important;
+}
+
+.menuText .active.item {
+  background-color: rgba(94, 196, 169,0.3) !important;
+  border-radius: 5px !important;
+}
+
+  .greenText {
+    color: #5EC4A9;
+  }
+
+  .greenText2 {
+    color: #5EC4A9;
+    font-weight: bold;
+  }
+
+  .blueText {
+    color: #00B1DF;
+    font-weight: bold;
+  }
+
+  .boldText {
+    font-weight: bold;
+  }
+
+.MainButton:hover{
+  color: #58caf1 !important;
+}
+
+.propText p {
+  font-size : 1em;
+  text-align : center;
+  color : #605E5E;
+  font-weight: 300 !important;
+}
+
+.boutonMLC {
+  color: white !important;
+  background-color: #58caf1 !important;
+  border: 2px solid #27BFF3 !important;
+}
+
+.boutonMLC:hover{
+  background-color : #50bade !important;
+}
+
+.boutonMLC2 {
+  color: #58caf1 !important;
+  background-color: white !important;
+  border: 2px solid #58caf1 !important;
+  margin-top: 1em;
+}
+
+.boutonMLC2:hover{
+  color : #5EC4A9 !important;
+  border: 2px solid #5EC4A9 !important;
+}
+
+.BlocFinPar {
+  font-size : 1.2em;
+  color : #868585;
+}
+
+.prix {
+  font-size: 1.3em;
+  font-weight : bold !important;
+  color : #605E5E;
+}
+
+.teamTitle {
+  font-size: 1em;
+  font-style: italic !important;
+  color : #605E5E
+}
+
+.divDisplay{
+  height: 120px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+  opacity : 0.6 !important;
+  filter: grayscale(100%);
+}
+
+.divDisplay:hover{
+  opacity : 1 !important;
+  filter: grayscale(0%);
+}
+
+.divDisplay2{
+  height: 120px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+  opacity : 0.6 !important;
+  filter: grayscale(100%);
+}
+
+.divDisplay2:hover{
+  opacity: 1 !important;
+  filter: grayscale(0%);
+}
+
+.linkFooter{
+  color: #77787a !important;
+}
+
+.linkFooter:hover{
+  color: white !important;
+}
+
+.linkIcon{
+  color: grey !important;
+}
+
+.linkIcon{
+  color: white !important;
+}

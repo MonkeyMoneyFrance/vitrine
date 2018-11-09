@@ -15,6 +15,7 @@ import {
   Dropdown,
   TextArea,
 } from 'semantic-ui-react'
+import genericFb from '../functions/genericFb'
 
   export default  class Footer extends Component {
     render(){
@@ -24,27 +25,27 @@ import {
               <Grid divided inverted stackable>
                 <Grid.Row>
                   <Grid.Column width={3}>
-                    <Header inverted as='h4' content='Services' />
+                    <Header inverted as='h4' content={genericFb.replaceString('%services')} />
                     <List link inverted>
                       <List.Item>
                         <Link to={'monnaielocale'}>
-                          <div className='linkFooter'>Monnaies Locales</div>
+                          <div className='linkFooter'>{genericFb.replaceString('%localCurrencies')}</div>
                         </Link>
                       </List.Item>
                       <List.Item>
                         <Link to={'fonctionnalites'}>
-                          <div className='linkFooter'>Fonctionnalités</div>
+                          <div className='linkFooter'>{genericFb.replaceString('%features')}</div>
                         </Link>
                       </List.Item>
                       <List.Item>
                         <Link to={'offres'}>
-                          <div className='linkFooter'>Offres</div>
+                          <div className='linkFooter'>{genericFb.replaceString('%offers')}</div>
                         </Link>
                       </List.Item>
                     </List>
                   </Grid.Column>
                   <Grid.Column width={3}>
-                    <Header inverted as='h4' content='Société' />
+                    <Header inverted as='h4' content={genericFb.replaceString('%company')} />
                     <List link inverted>
                       <List.Item>
                         <Link to={'monkeymoney'}>
@@ -53,20 +54,20 @@ import {
                       </List.Item>
                       <List.Item>
                         <Link to={'monkeymoney'}>
-                          <div className='linkFooter'>Rejoignez-nous</div>
+                          <div className='linkFooter'>{genericFb.replaceString('%joinUs')}</div>
                         </Link>
                       </List.Item>
                       <List.Item>
                         <Link to={'/'}>
-                          <div className='linkFooter'>Accueil</div>
+                          <div className='linkFooter'>{genericFb.replaceString('%home')}</div>
                         </Link>
                       </List.Item>
                     </List>
                   </Grid.Column>
                   <Grid.Column width={7}>
-                    <Header as='h4' inverted>Réseaux Sociaux</Header>
-                    <Link to={'https://www.facebook.com/MonkeyMoneyFrance/'}><Icon className='linkIcon' size='large' name='facebook f' link></Icon></Link>
-                    <Link to={'https://twitter.com/_MonkeyMoney_'}><Icon className='linkIcon' size='large' name='twitter' link></Icon></Link>
+                    <Header as='h4' inverted>{genericFb.replaceString('%socialNetworks')}</Header>
+                    <Link to={'https://www.facebook.com/MonkeyMoneyFrance/'} target="_blank"><Icon className='linkIcon' size='large' name='facebook f' link></Icon></Link>
+                    <Link to={'https://twitter.com/_MonkeyMoney_'} target="_blank"><Icon className='linkIcon' size='large' name='twitter' link></Icon></Link>
                   </Grid.Column>
                 </Grid.Row>
               </Grid>

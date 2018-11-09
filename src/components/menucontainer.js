@@ -22,6 +22,7 @@ import {
   Responsive
 } from 'semantic-ui-react'
 import logo from '../images/logoblanc.png'
+import genericFb from '../functions/genericFb'
 
 export default  class MenuContainer extends Component {
   render(){
@@ -41,10 +42,10 @@ export default  class MenuContainer extends Component {
             </Link>
           </Menu.Menu>
           <Menu.Menu borderless position='right' className='menuTextBlanc' style={{marginRight:'1em'}} >
-            <Link to='/'><Menu.Item as='a' >L'essentiel</Menu.Item></Link>
-            <Link to='fonctionnalites'><Menu.Item as='a' >Fonctionnalites</Menu.Item></Link>
+            <Link to='/'><Menu.Item as='a' >{genericFb.replaceString('%presentation')}</Menu.Item></Link>
+            <Link to='fonctionnalites'><Menu.Item as='a' >{genericFb.replaceString('%features')}</Menu.Item></Link>
             <Link to='offres'><Menu.Item as='a' >Offres</Menu.Item></Link>
-            <Link to='monnaielocale'><Menu.Item as='a' >Monnaie Locale</Menu.Item></Link>
+            <Link to='monnaielocale'><Menu.Item as='a' >{genericFb.replaceString('%localCurrencies')}</Menu.Item></Link>
             <Link to='monkeymoney'><Menu.Item as='a'>Monkey Money</Menu.Item></Link>
           </Menu.Menu>
           </Menu>
@@ -63,15 +64,15 @@ export default  class MenuContainer extends Component {
           <Menu.Menu borderless position='right' >
             <Menu.Item  icon='sidebar' size='medium' style={{width:'40px'}}/>
 
-          
+
 
 
           <Dropdown item icon='sidebar' size='medium' style={{width:'40px'}}>
               <Dropdown.Menu fluid style={{backgroundColor:'rgba(0,0,0,.87)'}}>
-                <Dropdown.Item as='a' style={{color:'rgba(0,0,0,.87)'}}><Link to='/'>L'essentiel</Link></Dropdown.Item>
-                <Dropdown.Item as='a' style={{color:'rgba(0,0,0,.87)'}}><Link to='fonctionnalites'>Fonctionnalites</Link></Dropdown.Item>
-                <Dropdown.Item as='a' style={{color:'rgba(0,0,0,.87)'}}><Link to='offres'>Offres</Link></Dropdown.Item>
-                <Dropdown.Item as='a' style={{color:'rgba(0,0,0,.87)'}}><Link to='monnaielocale'>Monnaie Locale</Link></Dropdown.Item>
+                <Dropdown.Item as='a' style={{color:'rgba(0,0,0,.87)'}}><Link to='/'>{genericFb.replaceString('%presentation')}</Link></Dropdown.Item>
+                <Dropdown.Item as='a' style={{color:'rgba(0,0,0,.87)'}}><Link to='fonctionnalites'>{genericFb.replaceString('%features')}</Link></Dropdown.Item>
+                <Dropdown.Item as='a' style={{color:'rgba(0,0,0,.87)'}}><Link to='offres'>{genericFb.replaceString('%offers')}</Link></Dropdown.Item>
+                <Dropdown.Item as='a' style={{color:'rgba(0,0,0,.87)'}}><Link to='monnaielocale'>{genericFb.replaceString('%localCurrencies')}</Link></Dropdown.Item>
                 <Dropdown.Item as='a' style={{color:'rgba(0,0,0,.87)'}}><Link to='monkeymoney'>Monkey Money</Link></Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
