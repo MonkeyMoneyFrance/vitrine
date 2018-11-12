@@ -179,7 +179,7 @@ class ContactForm extends Component {
                                 fontSize: '2.5em', textAlign: 'center', fontWeight: '200', color: 'white',
                                 letterSpacing: '-0.03em', lineHeight: '1.8em'
                             }}
-                        >Contactez-nous
+                        >{genericFb.replaceString('%contactUs')}
                         </Header>
                         <Header
                             as='h2'
@@ -194,7 +194,7 @@ class ContactForm extends Component {
                                 paddingRight: '5em',
                                 marginBottom: '3em'
                             }}
-                        >Remplissez les informations suivantes et nous vous répondrons le plus rapidement possible !
+                        >{genericFb.replaceString('%fillIn')}
                         </Header>
 
                         <Form autocomplete="off" disabled={this.state.loading} onSubmit={this.handleSubmit}  error={this.state.error && this.state.error != ''} inverted style={{width:'60%',margin:'auto',textAlign:'left'}}>
@@ -203,7 +203,7 @@ class ContactForm extends Component {
                               id='contactName'
                               error={this.state.errors.contactName && this.state.errors.contactName.error == true}
                               transparent
-                              label='Votre Prénom et votre Nom'
+                              label={genericFb.replaceString('%firstLastName')}
                               onChange={this.handleChange}
                               onBlur={this.handleBlur} />
 
@@ -215,15 +215,15 @@ class ContactForm extends Component {
                               selection
                               id='type'
                               style={{background:'transparent'}}
-                              label='Vous êtes :'
+                              label={genericFb.replaceString('%youAre')}
                               value = {this.state.message.type}
                               options={[
-                              {text:'Une Monnaie Locale',value:'asso'},
-                              {text:'Une Collectivité publique',value:'collectivity'},
-                              {text:'Une Entreprise',value:'company'},
-                              {text:'Un Etudiant',value:'student'},
-                              {text:'Un Journaliste',value:'media'},
-                              {text:"Quelqu'un d'autre",value:'other'},
+                              {text:genericFb.replaceString('%aLocalCurrency'),value:'asso'},
+                              {text:genericFb.replaceString('%aPublicBody'),value:'collectivity'},
+                              {text:genericFb.replaceString('%aCompany'),value:'company'},
+                              {text:genericFb.replaceString('%aStudent'),value:'student'},
+                              {text:genericFb.replaceString('%aJournalist'),value:'media'},
+                              {text:genericFb.replaceString('%someoneElse'),value:'other'},
                             ]}
                             onChange={this.handleDropdown}
                              />
@@ -234,7 +234,7 @@ class ContactForm extends Component {
                               id='detail'
                               error={this.state.errors.detail && this.state.errors.detail.error == true}
                               transparent
-                              label='Précisez...'
+                              label={genericFb.replaceString('%precise')}
                               onChange={this.handleChange}
                               onBlur={this.handleBlur}
                              />
@@ -248,7 +248,7 @@ class ContactForm extends Component {
                               type='email'
                               error={this.state.errors.email && this.state.errors.email.error == true}
                               transparent
-                              label='E-mail'
+                              label={genericFb.replaceString('%eMail')}
                               style={{background:'transparent'}}
                               onChange={this.handleChange}
                               onBlur={this.handleBlur}
@@ -262,7 +262,7 @@ class ContactForm extends Component {
                               pattern = "^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$"
                               error={this.state.errors.phone && this.state.errors.phone.error == true}
                               transparent
-                              label='Téléphone'
+                              label={genericFb.replaceString('%phone')}
                               onChange={this.handleChange}
                               onBlur={this.handleBlur}
                              />
@@ -271,7 +271,7 @@ class ContactForm extends Component {
 
                             <Form.TextArea
                               id='text'
-                              label='Dites nous en plus'
+                              label={genericFb.replaceString('%yourMessage')}
                               style={{background:'transparent'}}
                               error={this.state.errors.text && this.state.errors.text.error == true}
                               onChange={this.handleChange}
@@ -284,7 +284,7 @@ class ContactForm extends Component {
                             content={this.state.error}
                           />
                           <Form.Field>
-                            <Form.Button loading={this.state.loading} fluid labelPosition='right' icon='mail' type='submit' content='Envoyer' className='MainButton' size='big' style={{marginTop: '1em'}}/>
+                            <Form.Button loading={this.state.loading} fluid labelPosition='right' icon='mail' type='submit' content={genericFb.replaceString('%send')} className='MainButton' size='big' style={{marginTop: '1em'}}/>
 
                           </Form.Field>
                         </Form>
@@ -299,7 +299,7 @@ class ContactForm extends Component {
                                 fontSize: '2em', textAlign: 'center', fontWeight: '200', color: 'white',
                                 letterSpacing: '-0.03em', lineHeight: '1.8em'
                             }}
-                        >Contactez-nous
+                        >{genericFb.replaceString('%contactUs')}
                         </Header>
                         <Header
                             as='h2'
@@ -314,7 +314,7 @@ class ContactForm extends Component {
                                 paddingRight: '2em',
                                 marginBottom: '3em'
                             }}
-                        >Remplissez les informations suivantes et nous vous répondrons le plus rapidement possible !
+                        >{genericFb.replaceString('%fillIn')}
                         </Header>
 
                         <Form autocomplete="off" disabled={this.state.loading} onSubmit={this.handleSubmit}  error={this.state.error && this.state.error != ''} inverted style={{width:'60%',margin:'auto',textAlign:'left'}}>
@@ -323,7 +323,7 @@ class ContactForm extends Component {
                               id='contactName'
                               error={this.state.errors.contactName && this.state.errors.contactName.error == true}
                               transparent
-                              label='Votre Prénom et votre Nom'
+                              label={genericFb.replaceString('%firstLastName')}
                               onChange={this.handleChange}
                               onBlur={this.handleBlur} />
 
@@ -335,15 +335,15 @@ class ContactForm extends Component {
                               selection
                               id='type'
                               style={{background:'transparent'}}
-                              label='Vous êtes :'
+                              label={genericFb.replaceString('%youAre')}
                               value = {this.state.message.type}
                               options={[
-                              {text:'Une Monnaie Locale',value:'asso'},
-                              {text:'Une Collectivité publique',value:'collectivity'},
-                              {text:'Une Entreprise',value:'company'},
-                              {text:'Un Etudiant',value:'student'},
-                              {text:'Un Journaliste',value:'media'},
-                              {text:"Quelqu'un d'autre",value:'other'},
+                              {text:genericFb.replaceString('%aLocalCurrency'),value:'asso'},
+                              {text:genericFb.replaceString('%aPublicBody'),value:'collectivity'},
+                              {text:genericFb.replaceString('%aCompany'),value:'company'},
+                              {text:genericFb.replaceString('%aStudent'),value:'student'},
+                              {text:genericFb.replaceString('%aJournalist'),value:'media'},
+                              {text:genericFb.replaceString('%someoneElse'),value:'other'},
                             ]}
                             onChange={this.handleDropdown}
                              />
@@ -354,7 +354,7 @@ class ContactForm extends Component {
                               id='detail'
                               error={this.state.errors.detail && this.state.errors.detail.error == true}
                               transparent
-                              label='Précisez...'
+                              label={genericFb.replaceString('%precise')}
                               onChange={this.handleChange}
                               onBlur={this.handleBlur}
                              />
@@ -368,7 +368,7 @@ class ContactForm extends Component {
                               type='email'
                               error={this.state.errors.email && this.state.errors.email.error == true}
                               transparent
-                              label='E-mail'
+                              label={genericFb.replaceString('%eMail')}
                               style={{background:'transparent'}}
                               onChange={this.handleChange}
                               onBlur={this.handleBlur}
@@ -382,7 +382,7 @@ class ContactForm extends Component {
                               pattern = "^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$"
                               error={this.state.errors.phone && this.state.errors.phone.error == true}
                               transparent
-                              label='Téléphone'
+                              label={genericFb.replaceString('%phone')}
                               onChange={this.handleChange}
                               onBlur={this.handleBlur}
                              />
@@ -391,7 +391,7 @@ class ContactForm extends Component {
 
                             <Form.TextArea
                               id='text'
-                              label='Dites nous en plus'
+                              label={genericFb.replaceString('%yourMessage')}
                               style={{background:'transparent'}}
                               error={this.state.errors.text && this.state.errors.text.error == true}
                               onChange={this.handleChange}
@@ -404,7 +404,7 @@ class ContactForm extends Component {
                             content={this.state.error}
                           />
                           <Form.Field>
-                            <Form.Button loading={this.state.loading} fluid labelPosition='right' icon='mail' type='submit' content='Envoyer' className='MainButton' size='small' style={{marginTop: '1em'}}/>
+                            <Form.Button loading={this.state.loading} fluid labelPosition='right' icon='mail' type='submit' content={genericFb.replaceString('%send')} className='MainButton' size='small' style={{marginTop: '1em'}}/>
 
                           </Form.Field>
                         </Form>

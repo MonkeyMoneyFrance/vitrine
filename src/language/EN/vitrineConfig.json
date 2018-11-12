@@ -13,5 +13,18 @@
   "%wrongEmail":"This E-mail is not valid",
   "%wrongPhone":"This phone number is not valid",
   "%contactUs":"Contact Us",
-  "%fillIn":"Please fill the following informations in, and we will answer you as soon as possible!"
+  "%fillIn":"Please fill the following informations in, and we will answer you as soon as possible! ",
+  "%firstLastName":"Your Firstname and your Lastname",
+  "%youAre":"You Are:",
+  "%aLocalCurrency":"A Local Currency",
+  "%aPublicBody":"A Public Body",
+  "%aCompany":"A Company",
+  "%aStudent":"A Student",
+  "%aJournalist":"A Journalist",
+  "%someoneElse":"Someone Else",
+  "%precise":"Please Precise Here",
+  "%eMail":"E-Mail",
+  "%phone":"Phone Number",
+  "%yourMessage":"Your Message:",
+  "%send":"Send"
 }

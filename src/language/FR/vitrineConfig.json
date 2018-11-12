@@ -13,6 +13,19 @@
   "%wrongEmail":"Cet E-mail n'est pas valide",
   "%wrongPhone":"Ce numéro de téléphone n'est pas valide",
   "%contactUs":"Contactez-nous",
-  "%fillIn":"Remplissez les informations suivantes et nous vous répondrons le plus rapidement possible !"
+  "%fillIn":"Remplissez les informations suivantes et nous vous répondrons le plus rapidement possible !",
+  "%firstLastName":"Votre Prénom et votre nom",
+  "%youAre":"Vous êtes :",
+  "%aLocalCurrency":"Une Monnaie Locale",
+  "%aPublicBody":"Une collectivité publique",
+  "%aCompany":"Une entreprise",
+  "%aStudent":"Un étudiant",
+  "%aJournalist":"Un journaliste",
+  "%someoneElse":"Quelqu'un d'autre",
+  "%precise":"Pouvez-vous préciser ?",
+  "%eMail":"E-Mail",
+  "%phone":"Téléphone",
+  "%yourMessage":"Votre Message :",
+  "%send":"Envoyer"
 
 }
