@@ -16,6 +16,7 @@ import {
   TextArea,
 } from 'semantic-ui-react'
 import genericFb from '../functions/genericFb'
+import Terms from '../views/terms.js'
 
   export default  class Footer extends Component {
     render(){
@@ -48,8 +49,8 @@ import genericFb from '../functions/genericFb'
                     <Header inverted as='h4' content={genericFb.replaceString('%company')} />
                     <List link inverted>
                       <List.Item>
-                        <Link to={'monkeymoney'}>
-                          <div className='linkFooter'>Monkey Money</div>
+                        <Link to={'legalnotice'}>
+                          <div className='linkFooter'>{genericFb.replaceString('%legalNotice')}</div>
                         </Link>
                       </List.Item>
                       <List.Item>

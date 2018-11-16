@@ -17,9 +17,10 @@ import genericFb from '../functions/genericFb'
 class Home extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
     }
-    render() {
+
+    render(){
+
         var home = this.props.website.home
 
         return (
@@ -45,7 +46,9 @@ class Home extends Component {
                         backgroundSize: 'cover'
                     }}
                     >
+
                     <Container>
+
                         <Grid centered style={{marginTop: '5em'}}>
                             <Grid.Column only='computer' width={8} centered textAlign='center'>
                                 <Header

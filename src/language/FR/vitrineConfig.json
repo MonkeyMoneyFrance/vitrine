@@ -26,6 +26,7 @@
   "%eMail":"E-Mail",
   "%phone":"Téléphone",
   "%yourMessage":"Votre Message :",
-  "%send":"Envoyer"
+  "%send":"Envoyer",
+  "%legalNotice":"Mentions légales"
 
 }

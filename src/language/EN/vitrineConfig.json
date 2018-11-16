@@ -26,5 +26,6 @@
   "%eMail":"E-Mail",
   "%phone":"Phone Number",
   "%yourMessage":"Your Message:",
-  "%send":"Send"
+  "%send":"Send",
+  "%legalNotice":"Legal Notice (fr)"
 }
