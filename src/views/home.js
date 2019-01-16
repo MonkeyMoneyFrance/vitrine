@@ -10,7 +10,6 @@ import functions from '../config/functions'
 import firebase from '../config/initfirebase'
 import banqueImage from '../images/home/index'
 import Fond from '../images/home/fond.png'
-import ChatBot from './chatbot'
 import {Link} from 'react-router-dom'
 import genericFb from '../functions/genericFb'
 
@@ -714,7 +713,6 @@ class Home extends Component {
                         </Grid>
                     </Container>
                 </Segment>
-                {/* <ChatBot/> */}
                 <Footer/>
               </Sidebar.Pusher>
             </Sidebar.Pushable>

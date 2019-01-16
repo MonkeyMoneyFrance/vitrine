@@ -20,7 +20,6 @@ import SidebarMenu from '../components/sidebar';
 import numeriser from '../images/numeriser.png'
 import parcoursutilisateur from '../images/parcoursutilisateur.png'
 import Footer from '../components/footer'
-import ChatBot from './chatbot'
 import Fond from '../images/home/fond.png'
 import firebase from '../config/initfirebase'
 import banqueImage from '../images/home/index'
@@ -322,7 +321,6 @@ vertical>
 
 
 
-                {/* <ChatBot/> */}
                 <Footer/>
               </Sidebar.Pusher>
             </Sidebar.Pushable>

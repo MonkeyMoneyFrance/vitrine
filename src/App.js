@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import {BrowserRouter as Router,Route,Link,Switch} from 'react-router-dom'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import routes from './config/routes'
 import {Button,Container,Divider,Grid,Header,Icon,Image,List,Menu,Segment,Visibility,Sidebar,Dimmer,Loader} from 'semantic-ui-react'
 import logo from './images/logo.png'

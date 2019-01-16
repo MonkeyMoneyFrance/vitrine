@@ -28,7 +28,6 @@ import functions from '../config/functions'
 import firebase from '../config/initfirebase'
 import banqueImage from '../images/home/index'
 import Fond from '../images/home/fond.png'
-import ChatBot from './chatbot'
 import {Link} from 'react-router-dom'
 
 class Home extends Component {

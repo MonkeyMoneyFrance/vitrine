@@ -22,7 +22,6 @@ import SidebarMenu from '../components/sidebar';
 import numeriser from '../images/numeriser.png'
 import parcoursutilisateur from '../images/parcoursutilisateur.png'
 import Footer from '../components/footer'
-import ChatBot from './chatbot';
 import banqueImage from '../images/home/index'
 import Fond from '../images/home/fond.png'
 import firebase from '../config/initfirebase'
@@ -694,10 +693,6 @@ class Prices extends Component {
 
 </Segment>
 
-
-
-
-                {/* <ChatBot/> */}
 
                 <Footer/>
               </Sidebar.Pusher>
