@@ -1,4 +1,4 @@
-import * as FirebaseApp from 'firebase';
+import firebaseApp from 'firebase';
 
 // Make sure you swap this out with your Firebase app's config
 const config = {
@@ -10,7 +10,7 @@ const config = {
   messagingSenderId: "1030858595935"
 };
 
-const firebase = FirebaseApp.initializeApp(config)
+const firebase = firebaseApp.initializeApp(config)
 
 ;
 export default firebase;

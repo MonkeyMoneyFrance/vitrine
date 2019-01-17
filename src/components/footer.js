@@ -67,8 +67,8 @@ import Terms from '../views/terms.js'
                   </Grid.Column>
                   <Grid.Column width={7}>
                     <Header as='h4' inverted>{genericFb.replaceString('%socialNetworks')}</Header>
-                    <Link to={'https://www.facebook.com/MonkeyMoneyFrance/'} target="_blank"><Icon className='linkIcon' size='large' name='facebook f' link></Icon></Link>
-                    <Link to={'https://twitter.com/_MonkeyMoney_'} target="_blank"><Icon className='linkIcon' size='large' name='twitter' link></Icon></Link>
+                    <a href='https://www.facebook.com/MonkeyMoneyFrance/' target="_blank"><Icon className='linkIcon' size='large' name='facebook f' link></Icon></a>
+                    <a href='https://twitter.com/_MonkeyMoney_' target="_blank"><Icon className='linkIcon' size='large' name='twitter' link></Icon></a>
                   </Grid.Column>
                 </Grid.Row>
               </Grid>
