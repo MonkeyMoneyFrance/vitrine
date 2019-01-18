@@ -89,6 +89,13 @@ export default  class SidebarMenu extends Component {
                     </Link>
                   </Menu.Menu>
                 </Menu.Item>
+                <Menu.Item className='accordion-header'>
+                  <Menu.Menu >
+                    <Link to={'contactez-nous'}>
+                      <Menu.Item as='a' className='menuDropdown'>{genericFb.replaceString('%contactUs')}</Menu.Item>
+                    </Link>
+                  </Menu.Menu>
+                </Menu.Item>
 
 
               </Responsive>

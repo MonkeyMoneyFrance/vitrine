@@ -47,6 +47,8 @@ export default  class MenuContainer extends Component {
             <Link to='offres'><Menu.Item as='a' >Offres</Menu.Item></Link>
             <Link to='monnaielocale'><Menu.Item as='a' >{genericFb.replaceString('%localCurrencies')}</Menu.Item></Link>
             <Link to='monkeymoney'><Menu.Item as='a'>Monkey Money</Menu.Item></Link>
+            <Link to='contactez-nous'><Menu.Item as='a'>{genericFb.replaceString('%contactUs')}</Menu.Item></Link>
+
           </Menu.Menu>
           </Menu>
           </Grid.Column>
@@ -74,6 +76,8 @@ export default  class MenuContainer extends Component {
                 <Dropdown.Item as='a' style={{color:'rgba(0,0,0,.87)'}}><Link to='offres'>{genericFb.replaceString('%offers')}</Link></Dropdown.Item>
                 <Dropdown.Item as='a' style={{color:'rgba(0,0,0,.87)'}}><Link to='monnaielocale'>{genericFb.replaceString('%localCurrencies')}</Link></Dropdown.Item>
                 <Dropdown.Item as='a' style={{color:'rgba(0,0,0,.87)'}}><Link to='monkeymoney'>Monkey Money</Link></Dropdown.Item>
+                <Dropdown.Item as='a' style={{color:'rgba(0,0,0,.87)'}}><Link to='contactez-nous'>{genericFb.replaceString('%contactUs')}</Link></Dropdown.Item>
+
               </Dropdown.Menu>
             </Dropdown>
 

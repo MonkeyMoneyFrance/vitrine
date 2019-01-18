@@ -41,6 +41,9 @@ export default  class TopMenu extends Component {
             <Link to='monkeymoney'>
               <Menu.Item active={'/monkeymoney'==this.props.path} >Monkey Money</Menu.Item>
             </Link>
+            <Link to='contactez-nous'>
+              <Menu.Item active={'/monkeymoney'==this.props.path} >{genericFb.replaceString('%contactUs')}</Menu.Item>
+            </Link>
 
             {/***********************         Language Dropdown         *****************************/}
             <Menu.Item style={{alignItems:'flex-start'}}>

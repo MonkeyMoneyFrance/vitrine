@@ -25,7 +25,6 @@ const routes = [
   },{ path: '/monkeymoney',
       exact : true,
       main: Company,
-  },{ path: '/contactez_nous',
   },{ path: '/contactez-nous',
       exact : true,
       main: ContactForm,
