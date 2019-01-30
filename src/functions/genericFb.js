@@ -23,7 +23,6 @@ function getLanguage() {
  function setDictionary(language,callback) {
    //language in {'FR','EN',...}
    dictionary = indexDictionnary[language]
-
    callback()
  }
 

@@ -30,7 +30,8 @@ class App extends Component {
   }
 
   render() {
-    if (!this.state.website) return (<Dimmer><Loader /></Dimmer>)
+    if (!this.state.website)
+      return (<Dimmer><Loader /></Dimmer>)
     var self = this
       return (
         <Router>
