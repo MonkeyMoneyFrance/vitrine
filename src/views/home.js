@@ -713,6 +713,61 @@ class Home extends Component {
                         </Grid>
                     </Container>
                 </Segment>
+
+                {/* Ils nous ont fait confiance */}
+                <Segment style={{padding: '3em 1em', backgroundColor: '#f7f9fa', paddingBottom:'6em'}} vertical>
+                  <Grid textAlign='center'>
+                    <Grid.Column only='computer' width={16}>
+                      <Header as='h2' textAlign='center' style={{
+                          margin: 'auto',
+                          marginTop: '1em',
+                          marginBottom: '1em',
+                          fontWeight: '200',
+                          fontSize: '3em',
+                          color: '#4F4F4F',
+                      }}
+                      >
+                          <div dangerouslySetInnerHTML={{__html: home.items[5].title}}></div>
+
+                      </Header>
+                    </Grid.Column>
+                    <Grid.Column only='mobile tablet' width={16}>
+                      <Header as='h2' textAlign='center' style={{
+                          margin: 'auto',
+                          marginTop: '1em',
+                          marginBottom: '1em',
+                          fontWeight: '200',
+                          fontSize: '2em',
+                          color: '#4F4F4F',
+                      }}
+                      >
+                          <div dangerouslySetInnerHTML={{__html: home.items[5].title}}></div>
+
+                      </Header>
+                    </Grid.Column>
+                  </Grid>
+
+                    <Grid verticalAlign='top' stackable  className='propText'>
+                        <Grid.Row columns='equal' style={{marginTop: '1em'}}>
+
+                          {home.items[5].columns.map((val,i) =>{
+                            return(
+                              <Grid.Column key={i} textAlign='center' style={{ padding:'1em 1em'}}>
+                                <div className='divDisplay'>
+                                  <Image style={{height:'100px', width:'auto'}} src={banqueImage[val.image]}></Image>
+                                </div>
+                                  <p style={{padding: '0em 0.5em', fontSize:'1.1em'}}>
+                                      <div dangerouslySetInnerHTML={{__html: val.content}}></div>
+                                  </p>
+                              </Grid.Column>
+                            )
+                          })}
+
+                        </Grid.Row>
+                    </Grid>
+                  </Segment>
+
+                {/* Footer */}
                 <Footer/>
               </Sidebar.Pusher>
             </Sidebar.Pushable>

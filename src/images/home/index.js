@@ -82,6 +82,11 @@ import logoOuiShare from '../company/logoOuiShare.png'
 import logoRadioVillage from '../company/logoRadioVillage.png'
 import logoDemainLaVille from '../company/logoDemainLaVille.png'
 
+//images pour "ils nous ont fait confiance"
+import logoGalais from '../home/logoGalais.png'
+import logoMoppa from '../home/logoMoppa.png'
+import logoGalleco from '../home/logoGalleco.png'
+
 
 
 var icons = {
@@ -159,7 +164,10 @@ var icons = {
   logoAgro : logoAgro,
   logoOuiShare : logoOuiShare,
   logoRadioVillage : logoRadioVillage,
-  logoDemainLaVille : logoDemainLaVille
+  logoDemainLaVille : logoDemainLaVille,
+  logoGalais : logoGalais,
+  logoGalleco : logoGalleco,
+  logoMoppa : logoMoppa
 
 }
 
