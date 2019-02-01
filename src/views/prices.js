@@ -2,29 +2,18 @@ import React, {Component} from 'react';
 import {
     Button,
     Container,
-    Divider,
     Grid,
     Header,
-    Icon,
     Image,
-    List,
-    Menu,
     Segment,
-    Visibility,
-    Transition,
     Table,
-    Card,
     Sidebar
 } from 'semantic-ui-react'
-import MenuContainer from '../components/menucontainer'
 import TopMenu from '../components/topmenu'
 import SidebarMenu from '../components/sidebar';
-import numeriser from '../images/numeriser.png'
-import parcoursutilisateur from '../images/parcoursutilisateur.png'
 import Footer from '../components/footer'
 import banqueImage from '../images/home/index'
 import Fond from '../images/home/fond.png'
-import firebase from '../config/initfirebase'
 import {Link} from 'react-router-dom'
 
 

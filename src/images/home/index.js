@@ -86,6 +86,7 @@ import logoDemainLaVille from '../company/logoDemainLaVille.png'
 import logoGalais from '../home/logoGalais.png'
 import logoMoppa from '../home/logoMoppa.png'
 import logoGalleco from '../home/logoGalleco.png'
+import logoLaurentien from '../home/logoLaurentien.png'
 
 
 
@@ -167,7 +168,8 @@ var icons = {
   logoDemainLaVille : logoDemainLaVille,
   logoGalais : logoGalais,
   logoGalleco : logoGalleco,
-  logoMoppa : logoMoppa
+  logoMoppa : logoMoppa,
+  logoLaurentien : logoLaurentien
 
 }
 

@@ -1,22 +1,14 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {
-  Button,
   Container,
-  Divider,
   Grid,
   Header,
   Icon,
-  Image,
   List,
-  Menu,
   Segment,
-  Visibility,
-  Dropdown,
-  TextArea,
 } from 'semantic-ui-react'
 import genericFb from '../functions/genericFb'
-import Terms from '../views/terms.js'
 
   export default  class Footer extends Component {
     render(){
@@ -67,8 +59,8 @@ import Terms from '../views/terms.js'
                   </Grid.Column>
                   <Grid.Column width={7}>
                     <Header as='h4' inverted>{genericFb.replaceString('%socialNetworks')}</Header>
-                    <a href='https://www.facebook.com/MonkeyMoneyFrance/' target="_blank"><Icon className='linkIcon' size='large' name='facebook f' link></Icon></a>
-                    <a href='https://twitter.com/_MonkeyMoney_' target="_blank"><Icon className='linkIcon' size='large' name='twitter' link></Icon></a>
+                    <a href='https://www.facebook.com/MonkeyMoneyFrance/' target="_blank" rel="noopener noreferrer"><Icon className='linkIcon' size='large' name='facebook f' link></Icon></a>
+                    <a href='https://twitter.com/_MonkeyMoney_' target="_blank" rel="noopener noreferrer"><Icon className='linkIcon' size='large' name='twitter' link></Icon></a>
                   </Grid.Column>
                 </Grid.Row>
               </Grid>

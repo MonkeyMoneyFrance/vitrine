@@ -2,26 +2,17 @@ import React, {Component} from 'react';
 import {
     Button,
     Container,
-    Divider,
     Grid,
     Header,
     Icon,
     Image,
-    List,
-    Menu,
     Segment,
-    Visibility,
-    Transition,
     Sidebar
 } from 'semantic-ui-react'
-import MenuContainer from '../components/menucontainer'
-import TopMenu from '../components/topmenu'
 import SidebarMenu from '../components/sidebar';
-import numeriser from '../images/numeriser.png'
-import parcoursutilisateur from '../images/parcoursutilisateur.png'
+import TopMenu from '../components/topmenu'
 import Footer from '../components/footer'
 import Fond from '../images/home/fond.png'
-import firebase from '../config/initfirebase'
 import banqueImage from '../images/home/index'
 import {Link} from 'react-router-dom'
 
@@ -73,7 +64,7 @@ class Home extends Component {
                       />
 
                       <Header  as='h2' style={{fontSize: '1.3em', marginTop: '1em', textAlign: 'center', fontWeight: 'normal',
-                       color: 'white', fontWeight:'normal'}}>
+                       color: 'white'}}>
                        <div dangerouslySetInnerHTML={{__html: localcurrency.title2}}></div>
                      </Header>
                       <Image size='tiny' centered src={banqueImage[localcurrency.imageTitle]} style={{marginTop:'13em'}}>
@@ -101,7 +92,7 @@ class Home extends Component {
                       />
 
                       <Header  as='h2' style={{fontSize: '1.1em', marginTop: '1em', textAlign: 'center', fontWeight: 'normal',
-                       color: 'white', fontWeight:'normal'}}>
+                       color: 'white'}}>
                        <div dangerouslySetInnerHTML={{__html: localcurrency.title2}}></div>
                      </Header>
                       <Image size='tiny' centered src={banqueImage[localcurrency.imageTitle]} style={{marginTop:'13em'}}>

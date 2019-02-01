@@ -2,33 +2,18 @@ import React, {Component} from 'react';
 import {
     Button,
     Container,
-    Divider,
     Grid,
     Header,
     Icon,
     Image,
-    List,
-    Menu,
     Segment,
-    Visibility,
-    Dimmer,
-    Loader,
-    Transition,
-    Rail,
-    Sticky,
     Card,
-    Item,
     Sidebar
 } from 'semantic-ui-react';
-import MenuContainer from '../components/menucontainer';
 import TopMenu from '../components/topmenu';
 import SidebarMenu from '../components/sidebar';
-import headerhome from '../images/headerHome.png';
-import numeriser from '../images/numeriser.png';
-import parcoursutilisateur from '../images/parcoursutilisateur.png';
 import Footer from '../components/footer';
 import functions from '../config/functions';
-import firebase from '../config/initfirebase';
 import Fond from '../images/home/fond.png';
 import banqueImage from '../images/home/index';
 import {Link} from 'react-router-dom';
@@ -41,13 +26,11 @@ class Features extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            contextRef: {},
             sujet: ""
         };
         this.wasLoad = false;
         this.next = this.next.bind(this);
         this.previous = this.previous.bind(this);
-        this.handleContextRef = this.handleContextRef.bind(this)
     }
 
 
@@ -57,10 +40,6 @@ class Features extends Component {
 
     previous() {
         this.slider.slickPrev();
-    }
-
-    handleContextRef(contextRef){
-      this.setState({contextRef: {contextRef}})
     }
 
     scrollTo(data) {
@@ -79,8 +58,6 @@ class Features extends Component {
     renderFeature() {
         var features = this.props.website.features
 
-
-        const {contextRef} = (this.state) ? this.state.contextRef : void 0;
         let feature = features.list;
         let featureSorted = Object.keys(feature).sort(function (a, b) {
             return feature[a].index - feature[b].index
@@ -96,7 +73,7 @@ class Features extends Component {
         };
 
         return (
-            <div ref={this.handleContextRef} style={{width: '100%'}}>
+            <div style={{width: '100%'}}>
                 <Segment textAlign='center' vertical>
                   <Grid textAlign='center'>
                     <Grid.Row columns={1}>
@@ -342,21 +319,6 @@ class Features extends Component {
                         </Grid>
                     </div>
                 ) : ""}
-
-
-                {/*<Rail attached close='very' id='rail' position='left' style={{paddingTop: '3em'}}>
-                    <Sticky context={contextRef} offset={150}>
-                        <Menu pointing vertical style={{width: 'inherit', marginBottom: '3em'}}>
-                            {featureSorted.map((object, index) => {
-                                return (
-                                    <Menu.Item name={object} key={index}
-                                               active={this.state.activeItem === {object}}
-                                               onClick={(e, data) => this.scrollTo(data)}>{feature[object].label}</Menu.Item>
-                                )
-                            })}
-                        </Menu>
-                    </Sticky>
-                </Rail>*/}
             </div>
         )
     }
